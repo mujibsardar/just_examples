@@ -28,6 +28,7 @@ require("./config/passport")(passport);
 //var routes = require('./api/routes/todoListRoutes'); //importing route
 const routes = require('./api/routes/examplesRoutes'); //importing route
 const users = require("./api/routes/usersRoutes");
+
 // Routes
 app.use("/users", users);
 routes(app); //register the example routes
