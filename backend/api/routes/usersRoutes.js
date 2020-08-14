@@ -28,7 +28,7 @@ User.findOne({ email: req.body.email }).then(user => {
         email: req.body.email,
         password: req.body.password
       });
-// Hash password before saving in database
+      // Hash password before saving in database
       bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
@@ -43,7 +43,7 @@ User.findOne({ email: req.body.email }).then(user => {
   });
 });
 
-// @route POST api/users/login
+// @route POST /users/login
 // @desc Login user and return JWT token
 // @access Public
 router.post("/login", (req, res) => {
@@ -91,6 +91,22 @@ const email = req.body.email;
       }
     });
   });
+});
+
+// TODO Make sure to protect this route
+// @route GET /users/all
+// @desc Retrieve all users for the app
+// @access Public
+router.get("/all", (req, res) => {
+  // Find all users
+  User.find({}).then(users => {
+    // Check if user exists
+    if (!users) {
+      return res.status(404).json({ users: "No users found" });
+    }
+    return res.status(200).json({users});
+  });
+
 });
 
 module.exports = router;
