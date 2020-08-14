@@ -1,0 +1,44 @@
+.row {
+  width: 960px;
+    height: auto;
+}
+
+form .field {
+  display: block;
+  border: 1px solid #bdbdbd;
+  float: left;
+  width: 100%;
+}
+
+form .field.tnb {
+  border-top: 0;
+}
+
+form .field.half {
+  width: 50%;
+}
+
+form .field.last {
+  border-left: 0;
+}
+
+form .field label {
+  display: block;  
+  padding: 1.5rem 2rem 0;     
+}
+
+form .field input,
+form .field textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2rem 1.5rem;
+  font-size: 1.8rem;
+  border: 0;
+  color: #000;
+  outline: 0;
+}
+
+form .field textarea {
+  min-height: 150px;
+  resize: vertical;
+}
