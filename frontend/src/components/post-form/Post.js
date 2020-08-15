@@ -10,9 +10,9 @@ export default class Post extends React.Component {
       <div class="row">
         <div className="col s12" style={{ paddingLeft: "11.250px" }}>
           <h4>
-            <b>Post</b> Solution
+            <b>Post</b> an Example
           </h4>
-          <p className="grey-text text-darken-1">Tell us about your project</p>
+          <p className="grey-text text-darken-1">Keep it simple</p>
         </div>
 
         <form class="col s12">
