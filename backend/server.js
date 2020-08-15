@@ -23,15 +23,12 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 
-
-// TODO Fix this later, import/export the same way
-//var routes = require('./api/routes/todoListRoutes'); //importing route
-const routes = require('./api/routes/examplesRoutes'); //importing route
+const exampleRoutes = require('./api/routes/examplesRoutes');
 const users = require("./api/routes/usersRoutes");
 
 // Routes
 app.use("/users", users);
-routes(app); //register the example routes
+app.use("/examples", exampleRoutes);
 
 app.use(function(req, res) {
   res.status(404).send({url: req.originalUrl + ' not found'})

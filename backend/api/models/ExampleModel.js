@@ -1,7 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+
 // Create Schema
 const ExampleSchema = new Schema({
+  postedBy: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User'
+  },
   title: {
     type: String,
     required: true

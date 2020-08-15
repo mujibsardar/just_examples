@@ -1,15 +1,16 @@
-'use strict';
-module.exports = function(app) {
-  let exampleList = require('../controllers/examplesController');
+const express = require("express");
+const exampleCtrl =  require('../controllers/examplesController');
+const auth = require('../controllers/authController');
+const router = express.Router()
 
-  // todoList Routes
-  app.route('/example')
-    .get(exampleList.list_examples)
-    .post(exampleList.create_an_example);
+// Example Routes
+
+// Get all examples
+router.get('/', exampleCtrl.list_examples);
 
 
-  // app.route('/tasks/:taskId')
-  //   .get(todoList.read_a_task)
-  //   .put(todoList.update_a_task)
-  //   .delete(todoList.delete_a_task);
-};
+// Create new example
+// ** Must be authenticated to access this route. **
+router.post('/', auth.ctrl.required, exampleCtrl.create_an_example);
+
+module.exports = router;

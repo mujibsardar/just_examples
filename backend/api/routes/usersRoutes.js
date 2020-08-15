@@ -47,6 +47,7 @@ User.findOne({ email: req.body.email }).then(user => {
 // @desc Login user and return JWT token
 // @access Public
 router.post("/login", (req, res) => {
+
   // Form validation
 const { errors, isValid } = validateLoginInput(req.body);
 // Check validation
@@ -108,5 +109,6 @@ router.get("/all", (req, res) => {
   });
 
 });
+
 
 module.exports = router;
