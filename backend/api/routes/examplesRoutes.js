@@ -1,16 +1,16 @@
 const express = require("express");
 const exampleCtrl =  require('../controllers/examplesController');
 const auth = require('../controllers/authController');
-const router = express.Router()
+const router = express.Router();
 
-// Example Routes
-
-// Get all examples
+// Get All Examples
 router.get('/', exampleCtrl.list_examples);
 
+// Get All Examples by userId
+router.get('/:userId', exampleCtrl.list_user_examples);
 
-// Create new example
-// ** Must be authenticated to access this route. **
+// Create New Example
+// ** Must be Authenticated **
 router.post('/', auth.ctrl.required, exampleCtrl.create_an_example);
 
 module.exports = router;

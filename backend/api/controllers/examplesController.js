@@ -9,6 +9,17 @@ exports.list_examples = function(req, res) {
   });
 };
 
+exports.list_user_examples = function(req, res) {
+  // Get user id from the parameters
+  let userId = req.params.userId;
+  console.log(userId);
+  Example.find({postedBy: userId}, function(err, examples) {
+    if (err)
+      res.send(err);
+    res.json(examples);
+  });
+};
+
 exports.create_an_example = function(req, res) {
   let new_example = new Example(req.body);
   new_example.save(function(err, example) {
