@@ -4,49 +4,74 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./post.css";
 
-export default class Post extends React.Component {
+export default class Example extends React.Component {
+
+  state = {
+      example_post: {},
+      errors: {}
+  };
+
+
+  handleInputChange = (e) => {
+        const field = e.target.name;
+        const value = e.target.value;
+
+        //const errors = { ...this.state.errors, ...this.handleValidation(field, value) }
+
+        this.setState((prevState) => {
+            return {
+                ...prevState,
+                example_post: {
+                    ...prevState.example_post,
+                    [field]: value
+                },
+                //errors: {...errors}
+                errors: {}
+            };
+        }, () => localStorage.setItem('AddExamplePost', JSON.stringify(this.state)));
+    }
+
   render() {
     return (
-      <div class="row">
+      <div className="row">
         <div className="col s12" style={{ paddingLeft: "11.250px" }}>
           <h4>
             <b>Post</b> an Example
           </h4>
           <p className="grey-text text-darken-1">Keep it simple</p>
         </div>
-
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate" />
-              <label for="first_name">First Name</label>
+        <form className="col s12">
+          <div className="row">
+            <div className="input-field col s6">
+              <input id="first_name" type="text" className="validate" />
+              <label htmlFor="first_name">First Name</label>
             </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate" />
-              <label for="last_name">Last Name</label>
+            <div className="input-field col s6">
+              <input id="last_name" type="text" className="validate" />
+              <label htmlFor="last_name">Last Name</label>
             </div>
           </div>
 
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="email" type="email" class="validate" />
-              <label for="email">Title</label>
+          <div className="row">
+            <div className="input-field col s12">
+              <input name="title" onChange={this.handleInputChange} id="title" type="text" className="validate" />
+              <label htmlFor="email">Title</label>
             </div>
           </div>
 
           <div className="field tnb">
-            <label for="msg">Message</label>
-            <textarea name="msg"></textarea>
+            <label htmlFor="msg">Code Example</label>
+            <textarea onChange={this.handleInputChange} name="content"></textarea>
           </div>
 
-          <div class="row">
-            <div class="col s12">              
-              <div class="input-field inline">
+          <div className="row">
+            <div className="col s12">
+              <div className="input-field inline">
                 <a className="btn-floating btn-large waves-effect waves-light red">
                   <i className="material-icons">add</i>
                 </a>
                 <span
-                  class="helper-text"
+                  className="helper-text"
                   data-error="wrong"
                   data-success="right"
                 >
