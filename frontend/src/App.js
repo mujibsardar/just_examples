@@ -9,9 +9,9 @@ import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
-import Example from "./components/example-form/Example";
+import Example from "./components/containers/example-form/Example";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Dashboard from "./components/dashboard/Dashboard";
+import Dashboard from "./components/containers/dashboard/Dashboard";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
