@@ -10,7 +10,7 @@ import Landing from "./containers/landing/Landing";
 import Register from "./containers/auth/Register";
 import Login from "./containers/auth/Login";
 import Example from "./containers/example-form/Example";
-import PrivateRoute from "./components/private-route/PrivateRoute";
+import PrivateRoute from "./containers/private-route/PrivateRoute";
 import Dashboard from "./containers/dashboard/Dashboard";
 
 // Check for token to keep user logged in
