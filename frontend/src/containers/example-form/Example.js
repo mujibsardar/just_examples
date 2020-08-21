@@ -3,13 +3,14 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./example.css";
+import TagInput from "../../components/tags/Tags";
 
 export default class Example extends React.Component {
 
   state = {
       example_post: {},
-      errors: {}
-  };
+      errors: {}, 
+  }; 
 
 
   handleInputChange = (e) => {
@@ -32,6 +33,8 @@ export default class Example extends React.Component {
     }
 
   render() {
+    const data = ["HTML", "CSS", "JavaScript", "SASS", "Java", "Python"];
+
     return (
       <div className="row">
         <div className="col s12" style={{ paddingLeft: "11.250px" }}>
@@ -66,7 +69,7 @@ export default class Example extends React.Component {
 
           <div className="row">
             <div className="col s12">
-              <div className="input-field inline">
+            {/*   <div className="input-field inline">
                 <a className="btn-floating btn-large waves-effect waves-light red">
                   <i className="material-icons">add</i>
                 </a>
@@ -77,10 +80,13 @@ export default class Example extends React.Component {
                 >
                   Add tags
                 </span>
-              </div>
+               
+              </div> */}
+
+              <TagInput data={data} />
             </div>
 
-            <div className="tags">
+           {/*  <div className="tags">
               <a className="waves-effect waves-light btn">
                 <i className="material-icons left">cloud</i>C++
               </a>
@@ -111,8 +117,9 @@ export default class Example extends React.Component {
               <a className="waves-effect waves-light btn">
                 <i className="material-icons left">cloud</i>SCSS
               </a>
-            </div>
-          </div>
+            </div> */}
+          </div>        
+
         </form>
       </div>
     );

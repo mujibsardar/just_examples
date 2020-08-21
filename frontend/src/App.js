@@ -13,6 +13,7 @@ import Example from "./containers/example-form/Example";
 import PrivateRoute from "./containers/private-route/PrivateRoute";
 import Dashboard from "./containers/dashboard/Dashboard";
 
+
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
@@ -41,8 +42,9 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/new-example" component={Example} />
             <Switch>
-              <PrivateRoute exact path="/new-example" component={Example} />
+              {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
           </div>
