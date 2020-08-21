@@ -1,48 +1,28 @@
-#tags-wrapper {
-    display: inline-block;    
-    position: relative;
-    padding-right: 15px;
-    margin-top: 15px;
-  } 
-
-
-  #tags-wrapper input {
-    border: 1px solid rgb(214, 216, 218);
-    font-size: 14px;
-    padding: 0 8px;
-    border-radius: 6px;
-    margin: 0 8px 8px 0;
-    height: 48px;
-    max-width: 600px;
-    width: calc(100vw - 40px);
-  }
-  
-  #tags-wrapper input:focus {
-    outline: transparent;
-    border: 1px solid steelblue;
-  }
-  
-  #tags-wrapper button {
-    box-shadow: none;
-    border: 0;
-    font-size: 14px;
-    margin-left: 8px;
-    color: steelblue;
-    border-radius: 50%;
-    background: #fff;
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
-  }
-  
-  #tags-wrapper button:focus {
-    outline: 1px solid black;
-  }
-
-  button.btn.waves-effect.waves-light {
-    margin-top: 50px;
+.row .col.s12 {
+    margin-top: 25px;
 }
 
-.tag-wrapper{
-    margin-top: 50px;
+.tags-input {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 48px;
+    padding: 0 8px;
+    border: 1px solid #d6d8da;
+    border-radius: 6px;
+}
+
+.tags-input:focus-within {
+    border: 1px solid #0052cc;
+}
+
+.tags-input input {
+    border: none;
+    height: 46px;
+    font-size: 14px;
+    padding: 4px 0 0 0;
+}
+
+.tags-input input:focus {
+    outline: transparent;
 }
