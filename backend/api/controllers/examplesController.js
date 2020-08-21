@@ -21,6 +21,9 @@ exports.list_user_examples = function(req, res) {
 };
 
 exports.create_an_example = function(req, res) {
+  console.log(`=============================================`);
+  console.log(`CREATE EXAMPLE ON BACKEND REACHED`);
+  console.log(`${req.authorId}`);
   let new_example = new Example(req.body);
   new_example.save(function(err, example) {
     if (err)
