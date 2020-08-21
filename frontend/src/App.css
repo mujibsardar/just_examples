@@ -49,7 +49,7 @@ form .field textarea {
 }
 
 .tags-input:focus-within {
-    border: 1px solid #0052cc;
+    border: 1px solid #000;
 }
 
 .tags-input input {
