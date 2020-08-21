@@ -12,6 +12,7 @@ import Login from "./containers/auth/Login";
 import Example from "./containers/example-form/Example";
 import PrivateRoute from "./containers/private-route/PrivateRoute";
 import Dashboard from "./containers/dashboard/Dashboard";
+import "./App.css";
 
 
 // Check for token to keep user logged in
@@ -32,6 +33,7 @@ if (localStorage.jwtToken) {
     window.location.href = "./login";
   }
 }
+
 class App extends Component {
   render() {
     return (

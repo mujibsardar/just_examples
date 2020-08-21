@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from "react";
 import ReactDOM from "react-dom";
-import "./tags.css";
 
 export default function TagInput({ data }) {
     const [tags, setTags] = useState(data);
