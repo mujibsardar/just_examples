@@ -16,7 +16,7 @@ export default function TagInput({ data }) {
     };
   
     return (
-      <div>
+      <div className="tag-wrapper">
         <input
           type="text"
           onKeyUp={event => (event.key === "Enter" ? addTags(event) : null)}
@@ -27,7 +27,7 @@ export default function TagInput({ data }) {
           <div id="tags-wrapper"> 
             <a className="waves-effect waves-light btn">
                 <i className="material-icons right" onClick={() => removeTags(index)}>delete</i>{tag}
-                {/* <button onClick={() => removeTags(index)}>x</button> */}
+                
               </a>                          
               </div>
           ))}

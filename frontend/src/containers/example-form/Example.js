@@ -96,59 +96,7 @@ class Example extends React.Component {
               onChange={this.handleInputChange}
               name="content"
             ></textarea>
-          </div>
-
-          {/*  <div className="row">
-            <div className="col s12">
-              <div className="input-field inline">
-                <a className="btn-floating btn-large waves-effect waves-light red">
-                  <i className="material-icons">add</i>
-                </a>
-                <span
-                  className="helper-text"
-                  data-error="wrong"
-                  data-success="right"
-                >
-                  Add tags
-                </span>
-               
-              </div>
-              
-            </div>
-
-             <div className="tags">
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>C++
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>Python
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons right">cloud</i>JavaScript
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>HTML
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>CSS
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>React
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>jQuery
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>Java
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>C#
-              </a>
-              <a className="waves-effect waves-light btn">
-                <i className="material-icons left">cloud</i>SCSS
-              </a>
-            </div> 
-          </div>    */}
+          </div>         
         </form>
 
         <div className="row">
@@ -157,7 +105,12 @@ class Example extends React.Component {
           </div>
         </div>
 
-        <button className="btn btn-success">Submit</button>
+
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+
+        {/* <button className="btn btn-success">Submit</button> */}
       </div>
     );
   }
