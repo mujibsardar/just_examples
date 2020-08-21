@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { submitNewExample } from "../../store/actions/examplesActions";
 import "./example.css";
-import TagInput from "../../components/Tags";
+import TagsInput from "../../components/Tags";
 
 class Example extends React.Component {
   state = {
@@ -66,7 +66,9 @@ class Example extends React.Component {
   };
 
   render() {
-    const data = ["HTML", "CSS", "JavaScript", "SASS", "Java", "Python"];
+    const selectedTags = tags => {
+      console.log(tags);
+    };
 
     return (
       <div className="row">
@@ -101,13 +103,13 @@ class Example extends React.Component {
 
         <div className="row">
           <div className="col s12">
-            <TagInput data={data} />
+          <TagsInput selectedTags={selectedTags} />
           </div>
         </div>
 
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
+        <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i className="material-icons right">send</i>
   </button>
 
         {/* <button className="btn btn-success">Submit</button> */}
