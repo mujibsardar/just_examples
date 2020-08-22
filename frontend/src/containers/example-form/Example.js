@@ -98,22 +98,25 @@ class Example extends React.Component {
               name="content"
             ></textarea>
           </div>
+
+          <div className="row">
+            <div className="col s12">
+              <TagsInput selectedTags={selectedTags} />
+            </div>
+          </div>
+
+          <button
+            className="btn waves-effect waves-light"
+            type="submit"
+            name="action"
+          >
+            Submit
+            <i className="material-icons right">send</i>
+          </button>
+
         </form>
 
-        <div className="row">
-          <div className="col s12">
-            <TagsInput selectedTags={selectedTags} />
-          </div>
-        </div>
 
-        <button
-          className="btn waves-effect waves-light"
-          type="submit"
-          name="action"
-        >
-          Submit
-          <i className="material-icons right">send</i>
-        </button>
 
         {/* <button className="btn btn-success">Submit</button> */}
       </div>
