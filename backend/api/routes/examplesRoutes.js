@@ -11,6 +11,6 @@ router.get('/:userId', exampleCtrl.list_user_examples);
 
 // Create New Example
 // ** Must be Authenticated **
-router.post('/', auth.ctrl.testGetToken, exampleCtrl.create_an_example);
+router.post('/', auth.isAuthenticated, exampleCtrl.create_an_example);
 
 module.exports = router;

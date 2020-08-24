@@ -29,7 +29,6 @@ class Example extends React.Component {
         errors: {},
       };
     });
-    console.log(JSON.stringify(this.state));
   };
 
   handleNewExampleSubmit = (e) => {
@@ -44,8 +43,7 @@ class Example extends React.Component {
       // TODO Change from hard coded user id.
       this.props
         .submitNewExample({
-          ...this.state.example_post,
-          author: "5f384551df9b7212307c2f15",
+          ...this.state.example_post
         })
         .then((res) => {
           if (res.errors) {
@@ -113,12 +111,7 @@ class Example extends React.Component {
             Submit
             <i className="material-icons right">send</i>
           </button>
-
         </form>
-
-
-
-        {/* <button className="btn btn-success">Submit</button> */}
       </div>
     );
   }

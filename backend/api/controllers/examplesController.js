@@ -1,5 +1,6 @@
 let mongoose = require('mongoose'),
 Example = mongoose.model('Examples');
+const ObjectId = require('mongoose').Types.ObjectId;
 
 exports.list_examples = function(req, res) {
   Example.find({}, function(err, examples) {
@@ -21,10 +22,8 @@ exports.list_user_examples = function(req, res) {
 };
 
 exports.create_an_example = function(req, res) {
-  console.log(`=============================================`);
-  console.log(`CREATE EXAMPLE ON BACKEND REACHED`);
-  console.log(`${req.authorId}`);
   let new_example = new Example(req.body);
+  new_example.postedBy = new ObjectId(req.authorId);
   new_example.save(function(err, example) {
     if (err)
       res.send(err);
