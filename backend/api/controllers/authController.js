@@ -1,4 +1,3 @@
-const express_jwt = require('express-jwt');
 const jwt = require('jsonwebtoken');
 const config = require('../../config/keys.js');
 
@@ -19,20 +18,3 @@ exports.isAuthenticated = (req, res, next) => {
    res.status(403).json({ error: 'No token provided' })
   }
 };
-
-// TODO Remove this later.
-// exports.ctrl = {
-//   required: express_jwt({
-//     secret: config.secretOrKey,
-//     userProperty: 'payload',
-//     getToken: getTokenFromHeaders,
-//     algorithms: ['HS256']
-//   }),
-//   optional: express_jwt({
-//     secret: config.secretOrKey,
-//     userProperty: 'payload',
-//     getToken: getTokenFromHeaders,
-//     credentialsRequired: false,
-//     algorithms: ['HS256']
-//   }),
-// };

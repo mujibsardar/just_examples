@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/authActions";
 
 class Navbar extends Component {
   render() {
+    console.log(`is Authenticated? ${this.props.auth.isAuthenticated}`);
     return (
       <div className="navbar-fixed">
         <nav className="z-depth-0">
@@ -15,7 +19,7 @@ class Navbar extends Component {
               className="col s5 brand-logo center black-text"
             >
               <i className="material-icons">code</i>
-              MERN
+              JUST EXAMPLES
             </Link>
           </div>
         </nav>
@@ -23,4 +27,17 @@ class Navbar extends Component {
     );
   }
 }
-export default Navbar;
+
+Navbar.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Navbar);
