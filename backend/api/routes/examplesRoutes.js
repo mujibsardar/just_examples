@@ -13,4 +13,7 @@ router.get('/:userId', exampleCtrl.list_user_examples);
 // ** Must be Authenticated **
 router.post('/', auth.isAuthenticated, exampleCtrl.create_an_example);
 
+// Delete all examples in the database
+router.delete('/delete-all', exampleCtrl.delete_all);
+
 module.exports = router;

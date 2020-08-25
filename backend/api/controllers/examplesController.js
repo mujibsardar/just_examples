@@ -13,7 +13,6 @@ exports.list_examples = function(req, res) {
 exports.list_user_examples = function(req, res) {
   // Get user id from the parameters
   let userId = req.params.userId;
-  console.log(userId);
   Example.find({postedBy: userId}, function(err, examples) {
     if (err)
       res.send(err);
@@ -28,5 +27,14 @@ exports.create_an_example = function(req, res) {
     if (err)
       res.send(err);
     res.json(example);
+  });
+};
+
+
+exports.delete_all = function(req, res) {
+  Example.remove({}, err => {
+    if (err)
+      res.send(err);
+    res.json({ success: 'success' });
   });
 };
