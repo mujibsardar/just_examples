@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
 
 function Search() {
   return (
