@@ -1,3 +1,5 @@
+/* example.js tag styling */
+
 .row {
     width: 960px;
     height: auto;
@@ -65,4 +67,15 @@ form .field textarea {
 
 .waves-effect {
     margin: 10px 10px 10px 0;
+}
+
+
+/* search page styling */
+
+.container-search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }

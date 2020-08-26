@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { submitNewExample } from "../../store/actions/examplesActions";
-import TagsInput from "../../components/Tags";
+import TagsInput from "../../components/Tags/Tags";
 
 class Example extends React.Component {
   state = {

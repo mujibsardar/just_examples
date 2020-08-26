@@ -11,6 +11,7 @@ class Dashboard extends Component {
 render() {
     const { user } = this.props.auth;
     console.log(`printing props in dashboard: ${JSON.stringify(this.props.auth)}`)
+
     return (
           <div style={{ height: "75vh" }} className="container valign-wrapper">
             <div className="row">
