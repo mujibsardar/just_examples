@@ -13,7 +13,7 @@ class Navbar extends Component {
         <div className="nav-wrapper grey lighten-3">
           <a href="/" style={{ fontFamily: "monospace" }}
           className="brand-logo left black-text active">
-          <i className="material-icons">code</i> Just Examples</a>
+          <i className="material-icons">code</i>Just Example</a>
 
           //conditional render
           {!isAuthenticated ?
@@ -23,14 +23,14 @@ class Navbar extends Component {
               borderRadius: "1px",
               letterSpacing: "1.5px"
             }}
-            className="waves-effect waves-light btn-small">Register</a></li>
+            className="waves-effect waves-light btn-small blue accent-3">Register</a></li>
 
             <li><a href="/login" style={{
               width: "90px",
               borderRadius: "1px",
               letterSpacing: "1px"
             }}
-            className="waves-effect waves-light btn-small">Login</a></li>
+            className="waves-effect waves-light btn-small blue accent-4">Login</a></li>
           </ul>
 
           : //else
@@ -41,7 +41,7 @@ class Navbar extends Component {
             borderRadius: "1px",
             letterSpacing: "1px"
           }}
-          className="waves-effect waves-light btn-small hoverable teal accent-4"
+          className="waves-effect waves-light btn-small hoverable blue accent-3"
           onClick={this.onLogoutClick}
           >Logout</a></li>
           <li><a className="waves-effect waves-light btn-small deep-orange lighten-2">User PlaceHolder</a></li>
