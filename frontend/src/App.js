@@ -5,14 +5,14 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-import Navbar from "./components/Navbar";
-import Landing from "./containers/landing/Landing";
-import Register from "./containers/auth/Register";
-import Login from "./containers/auth/Login";
-import Example from "./containers/example-form/Example";
-import PrivateRoute from "./containers/private-route/PrivateRoute";
-import Dashboard from "./containers/dashboard/Dashboard";
-import Search from "./containers/search-page/SearchPage";
+import Navbar from "./components/Navbar/Navbar";
+import Homepage from "./containers/Homepage/Homepage";
+import Register from "./containers/Auth/Register";
+import Login from "./containers/Auth/Login";
+import Example from "./containers/Examples/Example";
+import PrivateRoute from "./containers/Private-Route/PrivateRoute";
+import Dashboard from "./containers/Dashboard/Dashboard";
+import Search from "./containers/Search/Search";
 import "./App.css";
 
 
@@ -42,13 +42,13 @@ class App extends Component {
         <Router>
           <div className="App">
             <Navbar />
-            <Route exact path="/" component={Landing} />
+            <Route exact path="/" component={Homepage} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/new-example" component={Example} />
             <Route exact path="/search" component={Search} />
             <Switch>
               {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
+              <PrivateRoute exact path="/new-example" component={Example} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
           </div>

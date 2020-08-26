@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { logoutUser } from "../actions/authActions";
+import { logoutUser } from "../../actions/authActions";
 import { connect } from "react-redux";
 
 class Navbar extends Component {
+  onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
   render() {
+    const { user } = this.props.auth;
     const isAuthenticated = this.props.auth.isAuthenticated
     console.log(`is auth?: ${this.props.auth.isAuthenticated}`)
     return (
@@ -44,7 +49,7 @@ class Navbar extends Component {
           className="waves-effect waves-light btn-small hoverable teal accent-4"
           onClick={this.onLogoutClick}
           >Logout</a></li>
-          <li><a className="waves-effect waves-light btn-small deep-orange lighten-2">User PlaceHolder</a></li>
+          <li><a className="waves-effect waves-light btn-small deep-orange lighten-2">{user.name.split(" ")[0]}</a></li>
         </ul>
         }//end conditional render
 
