@@ -10,7 +10,11 @@ class Dashboard extends Component {
   };
 render() {
     const { user } = this.props.auth;
+<<<<<<< HEAD
     //console.log(`Printing auth object ${JSON.stringify(this.props.auth)}`);
+=======
+    console.log(`printing props in dashboard: ${JSON.stringify(this.props.auth)}`)
+>>>>>>> origin/geoff-navbarUpdate
     return (
           <div style={{ height: "75vh" }} className="container valign-wrapper">
             <div className="row">
