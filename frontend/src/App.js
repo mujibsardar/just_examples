@@ -7,11 +7,11 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Navbar from "./components/Navbar";
 import Landing from "./containers/landing/Landing";
-import Register from "./containers/auth/Register";
-import Login from "./containers/auth/Login";
+import Register from "./containers/Auth/Register";
+import Login from "./containers/Auth/Login";
 import Example from "./containers/example-form/Example";
-import PrivateRoute from "./containers/private-route/PrivateRoute";
-import Dashboard from "./containers/dashboard/Dashboard";
+import PrivateRoute from "./containers/Private-Route/PrivateRoute";
+import Dashboard from "./containers/Dashboard/Dashboard";
 import Search from "./containers/search-page/SearchPage";
 import "./App.css";
 
