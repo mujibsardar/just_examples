@@ -20,7 +20,7 @@ class Navbar extends Component {
           className="brand-logo left black-text active">
           <i className="material-icons">code</i>Just Example</a>
 
-          //conditional render
+          {/*conditional render*/}
           {!isAuthenticated ?
           <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li><a href="/register" style={{
@@ -38,7 +38,7 @@ class Navbar extends Component {
             className="waves-effect waves-light btn-small blue accent-4">Login</a></li>
           </ul>
 
-          : //else
+          :
 
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><a href="#" style={{
@@ -51,7 +51,7 @@ class Navbar extends Component {
           >Logout</a></li>
           <li><a className="waves-effect waves-light btn-small deep-orange lighten-2">{user.name.split(" ")[0]}</a></li>
         </ul>
-        }//end conditional render
+        } {/*end conditional render*/}
 
         </div>
       </nav>

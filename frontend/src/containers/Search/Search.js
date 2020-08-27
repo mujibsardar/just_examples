@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 function Search() {
   return (
-    <div className="container-search">
+    <div className="container-search" style={{
+      //top:"50px"
+    }}>
       <div className="row">
         <div className="col s12">
           <div className="row">

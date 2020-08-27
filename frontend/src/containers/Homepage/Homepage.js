@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Search from "../Search/Search";
+
 class Landing extends Component {
   render() {
     return (
@@ -11,14 +13,17 @@ class Landing extends Component {
               <span style={{ fontFamily: "monospace" }}>JUST EXAMPLES</span>
             </h4>
             <p className="flow-text grey-text text-darken-1">
-
             </p>
-            <br />
-            
-
+            <div style={{
+              position: "relative",
+              padding:"10vh"
+            }}>
+              <Search/>
+            </div>
           </div>
         </div>
       </div>
+
     );
   }
 }

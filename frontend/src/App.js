@@ -13,6 +13,7 @@ import Example from "./containers/Examples/Example";
 import PrivateRoute from "./containers/Private-Route/PrivateRoute";
 import Dashboard from "./containers/Dashboard/Dashboard";
 import Search from "./containers/Search/Search";
+import ExampleView from "./components/example/Example";
 import "./App.css";
 
 
