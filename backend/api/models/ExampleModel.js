@@ -15,6 +15,10 @@ const ExampleSchema = new Schema({
     type: String,
     required: true
   },
+  comments: [{
+    type: mongoose.Schema.ObjectId,
+    ref: 'Comment'
+  }],
   major_tags: {
     type: [String],
     required: true
