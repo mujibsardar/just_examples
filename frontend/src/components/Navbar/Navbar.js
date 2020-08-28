@@ -12,7 +12,6 @@ class Navbar extends Component {
   render() {
     const { user } = this.props.auth;
     const isAuthenticated = this.props.auth.isAuthenticated
-    console.log(`is auth?: ${this.props.auth.isAuthenticated}`)
     return (
       <nav>
         <div className="nav-wrapper grey lighten-3">
