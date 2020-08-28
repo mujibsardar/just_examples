@@ -17,7 +17,7 @@ class Navbar extends Component {
         <div className="nav-wrapper grey lighten-3">
           <a href="/" style={{ fontFamily: "monospace" }}
           className="brand-logo left black-text active">
-          <i className="material-icons">code</i>Just Example</a>
+          <i className="material-icons">code</i>Just Examples</a>
 
           {/*conditional render*/}
           {!isAuthenticated ?
