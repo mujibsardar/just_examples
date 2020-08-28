@@ -6,7 +6,7 @@ import { Redirect } from "react-router-dom";
 import { submitNewExample } from "../../store/actions/examplesActions";
 import TagsInput from "../../components/Tags/Tags";
 
-class Example extends React.Component {
+class AddExample extends React.Component {
   state = {
     example_post: {},
     errors: {},
@@ -15,7 +15,7 @@ class Example extends React.Component {
   handleInputChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-
+    // TODO put this back in later
     //const errors = { ...this.state.errors, ...this.handleValidation(field, value) }
 
     this.setState((prevState) => {
@@ -24,6 +24,7 @@ class Example extends React.Component {
         example_post: {
           ...prevState.example_post,
           [field]: value,
+          // Add Tags field here
         },
         //errors: {...errors}
         errors: {},
@@ -62,11 +63,21 @@ class Example extends React.Component {
     }
   };
 
-  render() {
-    const selectedTags = (tags) => {
-      console.log(tags);
-    };
+  handleNewTag = (tags) => {
+    this.setState((prevState) => {
+      return {
+        ...prevState,
+        example_post: {
+          ...prevState.example_post,
+          major_tags: tags
+        },
+        //errors: {...errors}
+        errors: {},
+      };
+    });
+  }
 
+  render() {
     return (
       <div className="row">
         <div className="col s12" style={{ paddingLeft: "11.250px" }}>
@@ -99,10 +110,9 @@ class Example extends React.Component {
 
           <div className="row">
             <div className="col s12">
-              <TagsInput selectedTags={selectedTags} />
+              <TagsInput onNewTagSubmission={this.handleNewTag} />
             </div>
           </div>
-
           <button
             className="btn waves-effect waves-light"
             type="submit"
@@ -131,4 +141,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Example);
+export default connect(mapStateToProps, mapDispatchToProps)(AddExample);

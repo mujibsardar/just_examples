@@ -21,7 +21,7 @@ function Search() {
                 id="autocomplete-input"
                 className="autocomplete"
               />
-              <label for="autocomplete-input">search examples</label>
+              <label htmlFor="autocomplete-input">search examples</label>
             </div>
           </div>
         </div>

@@ -3,15 +3,16 @@ import React from "react";
 const TagsInput = (props) => {
 
   const [tags, setTags] = React.useState(["NodeJs", "MongoDB"]);
-  
+
   const removeTags = (indexToRemove) => {
     setTags(tags.filter((_, index) => index !== indexToRemove));
   };
-  
+
   const addTags = (event) => {
+    event.preventDefault();
     if (event.target.value !== "") {
       setTags([...tags, event.target.value]);
-      props.selectedTags([...tags, event.target.value]);
+      props.onNewTagSubmission([...tags, event.target.value]);
       event.target.value = "";
     }
   };
@@ -29,8 +30,9 @@ const TagsInput = (props) => {
 
       <input
         type="text"
-        onKeyUp={(e) => e.key === "Enter" && addTags(e)}
+        onKeyUp={(e) => e.key == "Enter" && addTags(e)}
         placeholder="Press enter to add tags"
+        onChange={props.handleInput}
       />
     </div>
   );

@@ -9,11 +9,10 @@ import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./containers/Homepage/Homepage";
 import Register from "./containers/Auth/Register";
 import Login from "./containers/Auth/Login";
-import Example from "./containers/Examples/Example";
+import Example from "./containers/Examples/AddExample";
 import PrivateRoute from "./containers/Private-Route/PrivateRoute";
 import Dashboard from "./containers/Dashboard/Dashboard";
 import Search from "./containers/Search/Search";
-import ExampleView from "./components/example/Example";
 import "./App.css";
 
 

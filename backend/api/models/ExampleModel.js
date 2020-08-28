@@ -15,6 +15,14 @@ const ExampleSchema = new Schema({
     type: String,
     required: true
   },
+  comments: [{
+    type: mongoose.Schema.ObjectId,
+    ref: 'Comment'
+  }],
+  ratings: [{
+    type: mongoose.Schema.ObjectId,
+    ref: 'Rating'
+  }],
   major_tags: {
     type: [String],
     required: true
@@ -22,6 +30,10 @@ const ExampleSchema = new Schema({
   minor_tags: {
     type: [String],
     required: true
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 });
 
