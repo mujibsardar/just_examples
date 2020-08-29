@@ -109,12 +109,12 @@ class AddExample extends React.Component {
           </div>
 
           <div className="row">
-            <div className="col s12">
+            <div className="input-field col s12">
               <TagsInput onNewTagSubmission={this.handleNewTag} />
             </div>
           </div>
           <button
-            className="btn waves-effect waves-light"
+            className="btn waves-effect waves-light blue accent-4"
             type="submit"
             name="action"
           >

@@ -79,3 +79,17 @@ form .field textarea {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+
+/* search bar styling */
+.material-icons.active {
+color: #2979ff !important;
+}
+
+.input-field input[type=text]:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+ color: #2979ff !important;
+}
+
+.input-field input[type=text]:focus, .materialize-textarea:focus:not([readonly]) {
+ border-bottom: 1px solid #2979ff !important;
+ box-shadow: 0 1px 0 0 #2979ff !important;
+}

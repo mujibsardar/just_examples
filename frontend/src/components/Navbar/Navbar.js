@@ -19,6 +19,7 @@ class Navbar extends Component {
           className="brand-logo left black-text active">
           <i className="material-icons">code</i>Just Examples</a>
 
+
           {/*conditional render*/}
           {!isAuthenticated ?
           <ul id="nav-mobile" className="right hide-on-med-and-down">
@@ -34,24 +35,24 @@ class Navbar extends Component {
               borderRadius: "1px",
               letterSpacing: "1px"
             }}
-            className="waves-effect waves-light btn-small blue accent-4">Login</a></li>
+            className="waves-effect waves-light btn-small blue accent-3">Login</a></li>
           </ul>
 
           :
 
         <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <li><a href="/new-example"class="waves-effect waves-light btn-small blue accent-4">Add Example</a></li>
+          <li><a href="/dashboard"className="btn-flat">{user.name.split(" ")[0]}</a></li>
           <li><a href="#" style={{
             width: "90px",
             borderRadius: "1px",
             letterSpacing: "1px"
           }}
-          className="waves-effect waves-light btn-small hoverable blue accent-3"
+          className="btn-flat"
           onClick={this.onLogoutClick}
           >Logout</a></li>
-          <li><a className="waves-effect waves-light btn-small deep-orange lighten-2">{user.name.split(" ")[0]}</a></li>
         </ul>
         } {/*end conditional render*/}
-
         </div>
       </nav>
 
