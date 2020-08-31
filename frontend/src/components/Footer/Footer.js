@@ -13,12 +13,8 @@ export default class Footer extends React.Component {
             <h3>Just<span> Examples</span></h3>
 
             <p className="footer-links">
-                <a href="#" className="link-1">Home</a>
-                
-                <a href="#">Blog</a>
-            
-                <a href="#">Pricing</a>
-            
+                <a href="#" className="link-1">Home</a>            
+
                 <a href="#">About</a>
                 
                 <a href="#">Faq</a>
