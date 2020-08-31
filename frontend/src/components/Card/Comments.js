@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime";
 import React from "react";
-import Atenas from "react-atenas-components";
+import Collapsible from "react-collapsible";
 
 
 
@@ -12,13 +12,11 @@ export default class Comments extends React.Component {
   onToggle = async () => {
     await this.setState({ open: !this.state.open });
   };
-  render() {  
-    return (
-      <div className="App">  
-      <a class="waves-effect waves-light btn" onClick={this.onToggle}>comments</a>
 
-        
-        <Atenas.Modal open={this.state.open} onClose={this.onToggle}>
+  render() {  
+    return (   
+            
+      <Collapsible trigger={"comments"}>
         <div className="post__comments">
                 <div className="comment">
                   <img
@@ -46,8 +44,8 @@ export default class Comments extends React.Component {
                   <input className="input" placeholder="Add a comment" />
                 </div>
               </div>
-        </Atenas.Modal>
-      </div>
+      
+              </Collapsible>
     );
   }
 }
