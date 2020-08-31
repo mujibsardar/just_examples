@@ -1,96 +1,53 @@
-import React, { Component } from "react";
-import Chips from "./Chips";
+import React from "react";
 
-export default class Card extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      details: [
-        {
-          id: 0,
-          author: "Angela Smith",          
-          posted: "22nd September",
-          title: "For-loop javascript",
-          content:
-            "for (i = 0; i < cars.length; i++) { text += cars[i]}",
-          heart: 23,
-          
-        },
-        {
-          id: 1,
-          author: "Jimmy Fletcher",          
-          posted: "8th September",
-          title: "Do-while loop javascript",
-          content:
-            "do {} while()",
-          heart: 10,
-          
-        },  
-      ],
-    };
-  }
-  heartClick = (id) => {
-    let detailsCopy = [...this.state.details];
-    detailsCopy[id].heart = detailsCopy[id].heart + 1;
-    console.log(detailsCopy[id].heart);
-    this.setState({
-      details: detailsCopy,
-    });
-  };
+class Card extends React.Component {
   render() {
     return (
-      <React.Fragment>
-        <div className="cardwrapper">
-          {this.state.details.map((current) => {
-            return (
-              <div key={current.id} className="card-display">
-                <div>
-                  <Author
-                    author={current.author}                    
-                    posted={current.posted}
-                  />
-                </div>
-                <div className="postContainer">
-                  <PostTitle posttitle={current.title} />
-                  <Post postContent={current.content} />
-                </div>
-                <IconBox
-                  heart={current.heart}
-                  heartClick={() => this.heartClick(current.id)}
-                />
+        <div className="feed">
+        <div className="post" style={{marginTop: '10px'}} >
+          <div className="post__top">
+            <div className="post__top-left">
+              <img className="post__profile-img" src="https://www.vut.ac.za/wp-content/uploads/2016/02/blank-profile-picture-973460_1280-283x189.png" alt="" />
+              <a className="post__profile-name" href="#">Camden Foucht</a>
+            </div>
+            <div>
+              <span className="post__date-posted">1m</span>
+            </div>
+          </div>
+          <div className="post__content">
+            <p className="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi perspiciatis praesentium omnis, nisi quae tempora. Provident natus sint, est labore ratione quam repellat laborum itaque voluptatem magnam perspiciatis aperiam unde.</p>
+          </div>
+          <div className="post__footer">
+            <a href="#" className="footer-link">
+                <i className="footer-icon fas fa-comments"></i>
+                12K
+              </a>
+            <a href="#" className="footer-link">
+                <i className="footer-icon fas fa-paw"></i>
+                39K
+              </a>
+            <a href="#" className="footer-link">
+              <i className="footer-icon fas fa-share-square"></i>
+                2K
+              </a>
+          </div>
+          <div className="post__comments">
+            <div className="comment">
+                          <img className="comment__profile-img" src="https://www.vut.ac.za/wp-content/uploads/2016/02/blank-profile-picture-973460_1280-283x189.png" alt="" />
+              <div className="comment__content">
+                <a href="#" className="comment-name">Peyton Couch</a>
+              <p className="comment__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi sapiente possimus beatae laboriosam aperiam facere id, architecto nobis ut aspernatur!</p>
               </div>
-            );
-          })}
+            </div>
+            <div className="comment-create">
+                    <img className="comment__profile-img" src="https://www.vut.ac.za/wp-content/uploads/2016/02/blank-profile-picture-973460_1280-283x189.png" alt="" />
+              <input className="input" placeholder="Add a comment" />
+            </div>
         </div>
-      </React.Fragment>
+        </div>
+      </div>
     );
   }
 }
 
-const Author = (props) => (
-  <div className="authorContainer">   
-    <div className="authorInfo">
-      <h6 className="author">{props.author} shared an example.</h6>
-      <p className="posted">{props.posted}</p>
-    </div>
-  </div>
-);
-const PostTitle = (props) => <h3 className="postTitle">{props.posttitle}</h3>;
-const Post = (props) => (
-  <div>
-    <div></div>
-    <div className="post">
-      <p className="postContent">{props.postContent}</p>
-    </div>
-  </div>
-);
-
-const IconBox = (props) => (
-  <div className="iconBox">
-    <span className="fa fa-comments fa-2x"></span>
-    <span>2</span>
-
-    <span className="fa fa-thumbs-up fa-2x" onClick={props.heartClick}></span>
-    <span>{props.heart} likes</span>
-  </div>
-);
+export default Card;

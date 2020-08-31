@@ -82,269 +82,145 @@ form .field textarea {
 
 /* Code Editor styling ===> */
 
-/* code {
-       
-    max-width: 32rem; 
-    background: #263238;
-    color: #eff;
-    padding: 1rem 3rem;  
-    border-radius: 0.25rem;
-    counter-reset: step;
-    counter-increment: step 0;
-    transition: background 0.3s;
-    outline: none;
-    position: absolute;
-    width: 100%;
-    height: 73%;
-  }
-  code:focus {
-    background: #2e3d44;
-  }
-  code p {
-    position: relative;
-    margin: 0.2rem;
-    font-family: monospace;
-    display: block;
-    white-space: pre;
-  }
-  code p::before {
-    position: absolute;
-    top: 0;
-    left: -1.75rem;
-    color: #50646d;
-    user-select: none;
-    content: counter(step);
-    counter-increment: step;
-  }
-  
-  .card-content {
-    background: #eee;
-} */
-
-
-h1 {
-    font-size: 3rem;
+.feed{
+  margin: 0 auto;
+  width: 750px;
+  padding: 45px 0;
 }
 
-h3 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    font-size: 2.5rem;
+.post{
+  width: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  min-height: 100px;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  padding: 12px 18px;
 }
 
-span {
-    font-size: 1rem;
+.post__top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.thumbnail {
-    width: 4rem;
-    height: 4rem;
-
+.post__top-left{
+  display: flex;
+  align-items: center;
 }
 
-.cardwrapper {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    /* grid-template-columns: repeat(auto-fill, 25rem);
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 4rem; */
-    /* background-color: ivory; */
-    justify-content: space-evenly;
+.post__profile-img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.post__profile-name{
+  color: #424242;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.post__profile-name:hover{
+  text-decoration: underline;
+}
+
+.post__date-posted{
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+
+/* Content */
+.post__content{
+  padding: 14px 8px;
+}
+.p{
+  font-size: 16px;
+  color: #1d2129;
+}
+
+.post__footer{
+  padding: 2px 10px;
 
 }
 
-.card-display {
-    background-color: linen;
-    /* border: 1px solid gray; */
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-    padding: 3rem;
-    margin: 2rem 3rem;
+.footer-link{
+  color: red;
+  margin: 0 30px 0 0;
+  text-decoration: none;
+  font-size: 14px;
+  color: #aaa;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin: 1rem 0;
+.footer-link:hover{
+  color: #1da1f2;
 }
 
-p {
-    text-align: left;
-    color: dimgray;
+.footer-icon{
+  fill: currentColor;
+  margin-right: 4px;
+  display: inline-block;
+  font-size: 24px;
 }
 
-.iconBox {
-    padding: 1rem 3rem;
+.footer-link:nth-child(2):hover{
+  color: #17bf63;
+}
+.footer-link:nth-child(3):hover{
+  color: #F44336;
 }
 
-.fa-thumbs-up {
-    color: dimgray;
-    margin: 5px 5px 10px 5px;
+/* Comment Section */
+
+.post__comments{
+  border-top: 1px solid #efefef;
+  padding: 16px 0;
+  margin-top: 10px;
 }
 
-.fa-thumbs-up:active,
-.fa-thumbs-up:hover {
-    color: crimson;
-    cursor: pointer;
+.comment-create{
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+.comment__profile-img{
+    height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+.input{
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 6px 14px;
+  border: none;
+  background-color: #eee;
+  height: 34px;
 }
 
-.fa-comments {
-    color: dimgray;
-    margin: 5px 5px 5px 0;
+.comment{
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+  border-radius: 3px;
+}
+.comment__text{
+  background-color: #eee;
+  font-size: 14px;
+  padding: 8px 6px;
 }
 
-.fa-comments:active,
-.fa-comments:hover {
-    color: #000;
-    cursor: pointer;
+.comment-name{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #424242;
 }
-
-.cardRating {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-}
-
-.cardTitle {    
-    font-size: 1.5rem;
-    padding-top: .5rem;
-}
-
-.cardBody {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: .5rem 0 .5rem;
-}
-
-.new {
-    margin: 0 1rem;
-    color: #fff;
-    background-color: teal;
-    line-height: 1;
-    font-weight: bold;
-    padding: 3px;
-    border-radius: 10%;
-}
-
-.header {
-    border-bottom: 1px solid teal;
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1rem;
-    position: relative;
-}
-
-.inputBox {
-    border-radius: 5px;
-    width: 20%;
-    border: 1px solid teal;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
-}
-
-.inputBox::-webkit-input-placeholder {
-    font-size: 2rem;
-    padding: 1rem;
-    margin: auto;
-}
-
-.post {
-    padding: 1rem;
-    /* text-align: center; */
-}
-
-.postTitle {
-    font-size: 2.5rem;    
-    font-weight: bold;
-}
-
-.postContainer {
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
-    border-top: 1px solid rgba(0, 0, 0, .2);
-    padding-bottom: 2rem;
-}
-
-.postContent {
-    font-size: 1.5rem;
-}
-
-.postSource {
-    font-size: 1.3rem;
-    font-style: italic;
-}
-
-.postPhoto {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.bio {
-    font-size: 1.2rem;
-}
-
-.authorContainer {
-    display: flex;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-}
-
-.authorInfo {
-    display: flex;
-    flex-direction: column;
-}
-
-.author {
-
-    font-size: 1.5rem;
-}
-
-.circular {
-    display: inline-block;
-    position: relative;
-    width: 5rem;
-    height: 5rem;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 7px;
-}
-
-.authorPhoto {
-    /*   width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    margin: 0 5px; */
-    width: auto;
-    height: 100%;
-    margin-left: -1rem;
-    margin-top: 0;
-}
-
-.posted {
-    font-size: 1.2rem;
-}
-
-@media only screen and (max-width: 800px) {
-    .cardwrapper {
-        width: 100%;
-    }
-
-    body {
-        padding: 0 3%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    body {
-        font-size: 60%;
-        padding: 0 1%;
-    }
-
-    .authorContainer {
-        flex-direction: column;
-    }
+.comment-name:hover{
+  text-decoration: underline
 }
