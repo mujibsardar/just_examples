@@ -4,7 +4,7 @@ import CodeSnippet from "../CodeSnippet/CodeSnippet";
 export default class Body extends React.Component {
   render() {
     return (
-      <div className="post__content">
+      <div className="post-content">
         <CodeSnippet language="javascript">
           {`function createClassNameString(classNames) {
   return classNames.join(' ');

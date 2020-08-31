@@ -8,18 +8,19 @@
   padding: 12px 18px;
 }
 
-.post__top {
+.post-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.post__top-left {
+.post-top-left {
   display: flex;
   align-items: center;
 }
 
-.post__profile-img {
+.post-profile-img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -27,30 +28,29 @@
   margin-right: 10px;
 }
 
-.post__profile-name {
+.post-profile-name {
   color: #424242;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
 }
 
-.post__profile-name:hover {
+.post-profile-name:hover {
   text-decoration: underline;
 }
 
-.post__date-posted {
+.post-date-posted {
   font-size: 14px;
   color: #aaaaaa;
 }
 
-
 /* Content */
-.post__content {
+.post-content {
   padding: 14px 8px;
 }
 
 .align {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .post-footer {
@@ -140,58 +140,17 @@
   text-decoration: underline
 }
 
-.Collapsible__contentInner {
-  padding: 10px;
-  border: 1px solid #ebebeb;
+.card {
+  border-radius: 25px;
 }
 
-.Collapsible__contentInner p {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 20px;
+div#codeSnippet {
+  background: rgb(39, 40, 34);
+  border-radius: 20px 0px 0px 20px;
 }
 
-.Collapsible__contentInner p:last-child {
-  margin-bottom: 0;
-}
-
-.Collapsible__trigger {
-  display: block;
-  font-weight: 400;
-  text-decoration: none;
-  color: #333333;
-  position: relative;
-  border: 1px solid white;
-  padding: 10px;
-}
-
-.Collapsible__trigger:after {
-  font-family: "FontAwesome";
-  content: "⤵";
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  display: block;
-  transition: transform 300ms;
-}
-
-.Collapsible__trigger.is-open:after {
-  transform: rotateZ(180deg);
-}
-
-.Collapsible__trigger.is-disabled {
-  opacity: 0.5;
-  background-color: grey;
-}
-
-
-span.Collapsible__trigger.is-closed,
-span.Collapsible__trigger.is-open {
-  color: rgba(0,0,0,0.6);
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.Collapsible {
-  background-color: #fff;
+.post-footer {
+  padding: 2px 0px;
+  top: 58%;
+  position: fixed;
 }
