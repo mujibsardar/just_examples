@@ -14,7 +14,7 @@ export default class Comments extends React.Component {
   };
 
   render() {  
-    return (   
+    return (       
             
       <Collapsible trigger={"comments"}>
         <div className="post__comments">

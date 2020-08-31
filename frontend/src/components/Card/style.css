@@ -50,7 +50,7 @@
 }
 
 .align {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .post-footer {
@@ -140,13 +140,9 @@
   text-decoration: underline
 }
 
-
-
-
 .Collapsible__contentInner {
   padding: 10px;
   border: 1px solid #ebebeb;
-  border-top: 0;
 }
 
 .Collapsible__contentInner p {
@@ -171,7 +167,7 @@
 
 .Collapsible__trigger:after {
   font-family: "FontAwesome";
-  content: "⤵️";
+  content: "⤵";
   position: absolute;
   right: 10px;
   top: 10px;
