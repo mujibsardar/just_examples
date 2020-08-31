@@ -114,6 +114,7 @@ class AddExample extends React.Component {
             </div>
           </div>
           <button
+            onKeyUp={(e) => e.key == "Enter" && e.preventDefault()}
             className="btn waves-effect waves-light"
             type="submit"
             name="action"
