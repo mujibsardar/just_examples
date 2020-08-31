@@ -1,3 +1,11 @@
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  text-transform: none;
+}
+
+.rounded {
+  border-radius: 25px;
+}
+
 .post {
   width: 100%;
   background-color: #fff;
@@ -140,6 +148,10 @@
   text-decoration: underline
 }
 
+button.AtenasButton___VpMK1 {
+  background-color: #26a69a;
+}
+
 .card {
   border-radius: 25px;
 }
@@ -153,4 +165,8 @@ div#codeSnippet {
   padding: 2px 0px;
   top: 58%;
   position: fixed;
+}
+
+.modal-wrapper .waves-effect {
+  margin: 0;
 }
