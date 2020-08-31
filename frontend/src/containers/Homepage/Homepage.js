@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer"
+
 class Landing extends Component {
   render() {
     return (
+      <>
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
@@ -13,12 +15,14 @@ class Landing extends Component {
             <p className="flow-text grey-text text-darken-1">
 
             </p>
-            <br />
-            
+            <br />            
 
           </div>
         </div>
+        
       </div>
+      <Footer />
+      </>
     );
   }
 }

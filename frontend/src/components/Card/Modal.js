@@ -20,7 +20,7 @@ class Modal extends React.Component {
   render() {
     return (
       <div className="modal-wrapper">
-      <a class="waves-effect waves-light btn-small" onClick={this.onToggle}>Comments</a>
+      <a className="waves-effect waves-light btn-small" onClick={this.onToggle}>Comments</a>
         {/* <Atenas.Button onClick={this.onToggle} style={{color: "#26a69a"}}>Comments</Atenas.Button> */}
         <Atenas.Modal open={this.state.open} onClose={this.onToggle}>
           <div>
