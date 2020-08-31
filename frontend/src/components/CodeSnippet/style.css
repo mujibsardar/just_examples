@@ -1,0 +1,36 @@
+
+.codeSnippet {
+    position: relative;
+  }
+  
+  .codeSnippet__hiddenTextArea {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  
+  .codeSnippet:hover .codeSnippet__copyBtn {
+    opacity: 1;
+  }
+  
+  .codeSnippet__copyBtn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background-color: transparent;
+    opacity: 0;
+    color: #fff;
+    border: 0;
+    font-size: 11px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .codeSnippet__copyBtn:hover {
+    cursor: pointer;
+  }
+  
+  .card-header {
+    font-size-adjust: 2.2rem;
+  }
