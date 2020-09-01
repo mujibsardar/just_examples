@@ -6,11 +6,11 @@ const tags = ["HTML", "JavaScript", "Python", "C++", "jQuery"];
 
   return (
       <div className="align">
-    {tags.map((tag, index) => (
-        <a className="chip" key={index}>         
-          {tag}
-        </a>
-      ))}
+        {tags.map((tag, index) => (
+            <span className="chip" key={index}>
+              {tag}
+            </span>
+          ))}
       </div>
   );
 }

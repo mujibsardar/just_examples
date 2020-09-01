@@ -3,14 +3,26 @@ import Body from "./Body";
 import Ratings from "./Ratings";
 import Modal from "./Modal";
 import Nav from "./Nav";
+import { getExample } from '../../store/actions/examplesActions';
+import { connect } from "react-redux";
 import "./style.css";
 
 class Card extends React.Component {
+  componentDidMount() {
+    this.getSingleExample();
+  }
+
+  getSingleExample() {
+    if (this.props.match.params.id) {
+      this.props.getExample(this.props.match.params.id);
+    }
+  }
+
   render() {
     return (
       <div className="row">
         <div className="col s12">
-          <h2 className="header">For-Loop JavaScript</h2>
+          <h2 className="header">{this.props.example.title}</h2>
           <div className="card horizontal">
             <div id="codeSnippet">
               <Body />
@@ -19,7 +31,7 @@ class Card extends React.Component {
             <div className="card-stacked">
               <div className="card-content">
                 <Nav />
-                <p>                  
+                <p>
                   In publishing and graphic design, Lorem ipsum is a placeholder
                   text commonly used to demonstrate the visual form of a
                   document or a typeface without relying on meaningful content.
@@ -37,4 +49,16 @@ class Card extends React.Component {
   }
 }
 
-export default Card;
+const mapStateToProps = state => {
+    return {
+        example: state.examples.example
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getExample: (exampleId) => dispatch(getExample(exampleId)),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card);

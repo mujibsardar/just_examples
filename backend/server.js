@@ -26,7 +26,7 @@ require("./config/passport")(passport);
 const exampleRoutes = require('./api/routes/examplesRoutes');
 const users = require("./api/routes/usersRoutes");
 
-// Routes
+// TODO - Prepend API to path? 
 app.use("/users", users);
 app.use("/examples", exampleRoutes);
 

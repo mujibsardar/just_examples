@@ -12,7 +12,7 @@ exports.list_examples = function(req, res) {
 
 exports.get_example = function(req, res) {
   let exampleId = req.params.exampleId;
-  Example.find({_id: exampleId}, function(err, example) {
+  Example.findOne({_id: exampleId}, function(err, example) {
     if (err)
       res.send(err);
     res.json(example);

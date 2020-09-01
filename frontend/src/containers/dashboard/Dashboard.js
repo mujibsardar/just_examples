@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
+import { logoutUser } from "../../store/actions/authActions";
 import Search from "../Search/Search";
-
+import ExampleList from "../../components/Example/ExampleList"
+//TODO: MOVE EXAMPLE LIST
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -12,8 +13,6 @@ class Dashboard extends Component {
   };
 render() {
     const { user } = this.props.auth;
-    console.log(`printing props in dashboard: ${JSON.stringify(this.props.auth)}`)
-
     return (
           <div style={{ height: "75vh" }} className="container valign-wrapper">
             <div className="row">
@@ -26,6 +25,11 @@ render() {
                   padding:"10vh"
                 }}>
                   <Search/>
+                </div>
+                <div style={{
+                  position: "relative",
+                }}>
+                  <ExampleList/>
               </div>
               </div>
             </div>

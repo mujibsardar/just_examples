@@ -20,7 +20,7 @@ const TagsInput = (props) => {
   return (
     <div className="tags-input">
       {tags.map((tag, index) => (
-        <a className="waves-effect waves-light btn" key={index}>
+        <a className="waves-effect waves-light btn blue accent-4" key={index}>
           <i className="material-icons left" onClick={() => removeTags(index)}>
             delete
           </i>
