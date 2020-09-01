@@ -1,81 +1,81 @@
 /* example.js tag styling */
 
 .row {
-    width: 960px;
-    height: auto;
+  width: 960px;
+  height: auto;
 }
 
 form .field {
-    display: block;
-    border: 1px solid #9e9e9e;
-    float: left;
-    width: 100%;
+  display: block;
+  border: 1px solid #9e9e9e;
+  float: left;
+  width: 100%;
 }
 
 form .field.tnb {
-    border-top: 0;
+  border-top: 0;
 }
 
 form .field label {
-    display: block;
-    padding: 1.5rem 2rem 0;
+  display: block;
+  padding: 1.5rem 2rem 0;
 }
 
 form .field textarea {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 2rem 1.5rem;
-    font-size: 1.8rem;
-    border: 0;
-    color: #9e9e9e;
-    outline: 0;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 2rem 1.5rem;
+  font-size: 1.8rem;
+  border: 0;
+  color: #9e9e9e;
+  outline: 0;
 }
 
 form .field textarea {
-    min-height: 150px;
-    resize: vertical;
+  min-height: 150px;
+  resize: vertical;
 }
 
 .row .col.s12 {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .tags-input {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    min-height: 48px;
-    padding: 0 8px;
-    border: 1px solid #d6d8da;
-    border-radius: 6px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 48px;
+  padding: 0 8px;
+  border: 1px solid #d6d8da;
+  border-radius: 6px;
 }
 
 .tags-input:focus-within {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .tags-input input {
-    border: none;
-    height: 46px;
-    font-size: 14px;
-    padding: 4px 0 0 0;
+  border: none;
+  height: 46px;
+  font-size: 14px;
+  padding: 4px 0 0 0;
 }
 
 .tags-input input:focus {
-    outline: transparent;
+  outline: transparent;
 }
 
 .waves-effect {
-    margin: 10px 10px 10px 0;
+  margin: 10px 10px 10px 0;
 }
 
 
 /* search page styling */
 
 .container-search {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }

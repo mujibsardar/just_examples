@@ -14,7 +14,7 @@ import PrivateRoute from "./containers/Private-Route/PrivateRoute";
 import Dashboard from "./containers/Dashboard/Dashboard";
 import Search from "./containers/Search/Search";
 import "./App.css";
-
+import Card from "./components/Card/Card";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -25,7 +25,7 @@ if (localStorage.jwtToken) {
   const decoded = jwt_decode(token);
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
-// Check for expired token
+  // Check for expired token
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
     // Logout user
@@ -46,6 +46,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/search" component={Search} />
+            <Route exact path="/search-results" component={Card} />
             <Switch>
               {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
               <PrivateRoute exact path="/new-example" component={Example} />

@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
+import Footer from "../../components/Footer/Footer"
 
 class Landing extends Component {
   render() {
     return (
+      <>
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
@@ -23,7 +25,8 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-
+      <Footer />  
+      </>
     );
   }
 }
