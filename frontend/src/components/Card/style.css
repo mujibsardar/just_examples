@@ -34,7 +34,9 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
+  margin-left: -52px;
 }
+
 
 .post-profile-name {
   color: #424242;

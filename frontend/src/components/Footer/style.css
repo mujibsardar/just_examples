@@ -2,14 +2,12 @@
     display: none;
 }
 
-#custom-footer {       
+#custom-footer {
+    display: block;
+    padding: 20px 0 0 0;
+    background-color: #212121;
     text-align: center;
-    color: #fff;    
-    /* position: absolute; */
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;   
+    color: #fff;
 }
 
 
@@ -78,8 +76,9 @@
     font-size: 12px;
     line-height: 16px;
     margin-top: 15px;
-    padding: 10px;   
+    padding: 10px;
 }
+
 
 #custom-footer .copyright-block i.material-icons {
     font-size: 12px;
@@ -91,8 +90,4 @@
     width: 45px;
     height: 45px;
     padding: 4px;
-}
-
-.custom-footer-wrapper {
-    background-color: #212121;
 }
