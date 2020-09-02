@@ -7,16 +7,16 @@ export default class Footer extends React.Component {
         <div id="custom-footer">
         <div className="custom-footer-wrapper">
             <div className="media-block">
-                <a className="media-link" href="https://twitter.com/nasclubdebates">
+                <a className="media-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Twitter-min.png" />
                 </a>
-                <a className="media-link" href="https://www.youtube.com/channel/UCvUrSp0TTR2I05dS4GVdkdA">
+                <a className="media-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Youtube-min.png" />
                 </a>
-                <a className="media-link" href="https://www.twitch.tv/nasclubdebates">
+                <a className="media-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Twitch-min.png" />
                 </a>
-                <a className="media-link discord-link" href="https://discord.gg/aGNz5KE">
+                <a className="media-link discord-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Discord-min.png"/>
                 </a>
             </div>
