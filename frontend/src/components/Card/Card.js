@@ -19,6 +19,8 @@ class Card extends React.Component {
   }
 
   render() {
+    // TODO Remove later
+    // console.log(JSON.stringify(this.props.example));
     return (
       <div className="row">
         <div className="col s12">
