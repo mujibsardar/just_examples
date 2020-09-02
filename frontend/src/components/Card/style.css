@@ -163,8 +163,8 @@ div#codeSnippet {
 
 .post-footer {
   padding: 2px 0px;
-  top: 58%;
-  position: fixed;
+  position: relative;
+    top: 25%;
 }
 
 .modal-wrapper .waves-effect {
