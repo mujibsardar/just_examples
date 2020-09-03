@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Search from "../Search/Search";
-import Footer from "../../components/Footer/Footer"
-import ExampleCard from "../../components/Feed/ExampleCard"; 
+import CardTest from "../../components/CardTest/CardTest"
+
 
 class Landing extends Component {
   render() {
@@ -27,7 +26,7 @@ class Landing extends Component {
         </div>
       </div>
 
-      <ExampleCard />
+     <CardTest />
        
       </>
     );
