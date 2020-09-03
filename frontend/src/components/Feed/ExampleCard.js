@@ -7,6 +7,7 @@ import "./style.css";
 import Footer from "../Footer/Footer";
 import Nav from "../Card/Nav";
 
+
 export default class SocialCard extends React.Component {
     constructor(props) {
       super(props);
@@ -16,13 +17,14 @@ export default class SocialCard extends React.Component {
       return (
         <div>
         
-          <div className="wrapper">
+        <div className="wrapper">
             <Nav />
             <TopPicture />
             <BottomText />
             <Features />
-          </div>
+            </div>        
 
+         
           <div className="wrapper">
           <Nav />
             <TopPicture />
