@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { logoutUser } from "../../store/actions/authActions";
 import { connect } from "react-redux";
+import "./style.css";
+
 
 class Navbar extends Component {
   onLogoutClick = e => {
@@ -14,21 +16,21 @@ class Navbar extends Component {
     const isAuthenticated = this.props.auth.isAuthenticated
     return (
       <nav>
-        <div className="nav-wrapper grey lighten-3">
+        <div className="nav-wrapper grey darken-4">
           <a href="/" style={{ fontFamily: "monospace" }}
-          className="brand-logo left black-text active">
+          className="brand-logo left black-text active white-text">
           <i className="material-icons">code</i>Just Examples</a>
 
 
           {/*conditional render*/}
           {!isAuthenticated ?
-          <ul id="nav-mobile" className="right hide-on-med-and-down">
+          <ul id="nav-mobile" className="right hide-on-med-and-down white-text">
               <li><a href="/register" style={{
               width: "110px",
               borderRadius: "1px",
               letterSpacing: "1.5px"
             }}
-            className="waves-effect waves-light btn-small blue accent-3">Register</a></li>
+            className="waves-effect waves-light btn-small blue accent-3 white-text">Register</a></li>
 
             <li><a href="/login" style={{
               width: "90px",
@@ -42,13 +44,13 @@ class Navbar extends Component {
 
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li><a href="/add/example"className="waves-effect waves-light btn-small blue accent-4">Add Example</a></li>
-          <li><a href="/dashboard"className="btn-flat">{user.name.split(" ")[0]}</a></li>
+          <li><a href="/dashboard"className="btn-flat white-text">{user.name.split(" ")[0]}</a></li>
           <li><a href="#" style={{
             width: "90px",
             borderRadius: "1px",
             letterSpacing: "1px"
           }}
-          className="btn-flat"
+          className="btn-flat white-text"
           onClick={this.onLogoutClick}
           >Logout</a></li>
         </ul>

@@ -6,6 +6,7 @@ import { setCurrentUser, logoutUser } from "./store/actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import Homepage from "./containers/Homepage/Homepage";
 import Register from "./containers/Auth/Register";
 import Login from "./containers/Auth/Login";
@@ -47,6 +48,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/example/:id" component={Card} />
+            <Footer/>
             <Switch>
               {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
               <PrivateRoute exact path="/add/example" component={Example} />

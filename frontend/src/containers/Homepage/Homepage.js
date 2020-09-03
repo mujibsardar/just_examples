@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
-import Footer from "../../components/Footer/Footer"
 
 class Landing extends Component {
   render() {
@@ -25,7 +24,6 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-      <Footer />  
       </>
     );
   }
