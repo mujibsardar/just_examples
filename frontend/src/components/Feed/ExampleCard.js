@@ -22,7 +22,9 @@ export default class SocialCard extends React.Component {
             <BottomText />
             <Features />
           </div>
+
           <div className="wrapper">
+          <Nav />
             <TopPicture />
             <BottomText />
             <Features />

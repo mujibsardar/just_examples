@@ -20,9 +20,10 @@ body {
     width: 100%;
     height: 280px;
     padding-top: 0px;
-    background-color: #ffa003;
+    /* background-color: #ffa003; */
     color: white;
     border-radius: 10px 10px 0px 0px;
+    background: rgb(39, 40, 34);
 }
 
 .topPicture .logo {
@@ -40,19 +41,20 @@ body {
     font-weight: 300;
 }
 
-.topPicture .text {
+/* .topPicture .text {
     font-size: 22px;
     padding-left: 58px;
-}
+} */
 
-.topPicture .text h1 {
+/* .topPicture .text h1 {
     font-weight: 300;
     margin-top: 20px;
-}
+} */
 
 .bottomText {
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: -22px;
 }
 
 .bottomText h4 {

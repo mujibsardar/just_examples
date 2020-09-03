@@ -1,4 +1,5 @@
 import React from "react";
+import Body from "../Card/Body";
 
 
 
@@ -9,12 +10,9 @@ export default class TopPicture extends React.Component {
     }
     render() {
       return (
-        <div className="topPicture">
-          <div className="logo">
-            <h1>DEV</h1>
-          </div>
+        <div className="topPicture">       
           <div className="text">
-            <h1>Learning React? Start Small.</h1>
+            <Body />
           </div>
         </div>
       );
