@@ -47,3 +47,15 @@ exports.delete_all = function(req, res) {
     res.json({ success: 'success' });
   });
 };
+
+exports.search_examples = function(req, res) {
+  // TODO Fix later, remove console log, change to non hard coded query
+  let search = req.body.query;
+  Example.find({$text: {$search: search}}, function (err, examples) {
+                if (err) {
+                    res.send(err);
+                } else {
+                    res.json(examples);
+                }
+        });
+};

@@ -12,6 +12,9 @@ router.get('/user-examples/:userId', exampleCtrl.list_user_examples);
 // Get a specific example
 router.get('/:exampleId', exampleCtrl.get_example);
 
+// Search examples
+router.post('/search', exampleCtrl.search_examples);
+
 // Create New Example
 // ** Must be Authenticated **
 router.post('/', auth.isAuthenticated, exampleCtrl.create_an_example);
