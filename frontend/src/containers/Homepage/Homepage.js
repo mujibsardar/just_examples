@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Search from "../Search/Search";
+import Search from "../../components/Search/Search";
 
-class Landing extends Component {
+class Home extends Component {
   render() {
     return (
       <>
@@ -28,4 +28,4 @@ class Landing extends Component {
     );
   }
 }
-export default Landing;
+export default Home;

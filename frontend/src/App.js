@@ -13,7 +13,7 @@ import Login from "./containers/Auth/Login";
 import Example from "./containers/Examples/AddExample";
 import PrivateRoute from "./containers/Private-Route/PrivateRoute";
 import Dashboard from "./containers/Dashboard/Dashboard";
-import Search from "./containers/Search/Search";
+import Search from "./components/Search/Search";
 import "./App.css";
 import Card from "./components/Card/Card";
 
@@ -46,11 +46,9 @@ class App extends Component {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/search" component={Search} />
             <Route exact path="/example/:id" component={Card} />
             <Footer/>
             <Switch>
-              {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
               <PrivateRoute exact path="/add/example" component={Example} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
