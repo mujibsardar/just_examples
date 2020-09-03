@@ -91,3 +91,15 @@ body {
 .socialFeature span {
     margin-left: 5px;
 }
+
+.fa-retweet:before {
+    color: #0fc057;
+}
+
+.fa-comment:before {
+    color: #3d5970;
+}
+
+.fa-heart:before {
+    color: #d70906;
+}
