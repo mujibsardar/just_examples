@@ -1,19 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
-// SEARCH STEP X)
 import { useDispatch } from 'react-redux';
+import { searchExamples } from '../../store/actions/examplesActions';
 
 import "../../App.css";
 
 const Search = () => {
-
+  // TODO Best solution?
   const [dispatch, setDispatch] = useState({dispatch: useDispatch()});
-  // SEARCH STEP X)
+
   function handleSearch(e) {
-    const value = e.target.value;
-    // TODO Remove later
-    console.log(`value: ${value}`);
+    const query = e.target.value;
+    dispatch.dispatch(searchExamples(query));
   }
 
   return (
@@ -32,7 +31,6 @@ const Search = () => {
                 type="text"
                 id="autocomplete-input"
                 className="autocomplete"
-                // SEARCH STEP X) Call on handleInputChange
                 onChange={handleSearch}
               />
               <label htmlFor="autocomplete-input">search examples</label>

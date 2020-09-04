@@ -29,7 +29,7 @@ export const submitNewExample = (exampleData) => {
 // Get single Example
 export const getExample = (id) => dispatch => {
   axios
-    .get("/examples/" + id)
+    .get('/examples/' + id)
     .then(res =>  dispatch({ type: SET_EXAMPLE, payload: res }))
     .catch(err => {
         dispatch({
@@ -40,20 +40,16 @@ export const getExample = (id) => dispatch => {
     );
 };
 
-// SEARCH STEP 2) Create an action that makes API call to search all examples
 // Search Examples
 export const searchExamples = (queryData) => dispatch => {
-  // TODO Remove later
-  console.log(`searchExamples queryData: ${queryData}`);
-  return dispatch => {
-      return fetch('/examples/search', options(queryData))
-      .then(res => dispatch({ type: SET_EXAMPLES, payload: res }))
-      .catch(err => {
-          dispatch({
-            type: GET_ERRORS,
-            payload: err
-          })
-        }
-      );
-  }
-};
+  axios
+    .post('/examples/search',{query: queryData})
+    .then(res =>  dispatch({ type: SET_EXAMPLES, payload: res }))
+    .catch(err => {
+        dispatch({
+          type: GET_ERRORS,
+          payload: err
+        })
+      }
+    );
+}
