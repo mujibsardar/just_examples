@@ -29,7 +29,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "npm start --prefix ../backend",
+    "server": "npm run server --prefix ../backend",
     "client": "npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },

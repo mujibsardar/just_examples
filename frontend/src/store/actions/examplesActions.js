@@ -1,9 +1,10 @@
 import axios from "axios";
 
+// SEARCH STEP 1) Import set examples string type
 import {
   GET_ERRORS,
-  GET_EXAMPLE,
-  SET_EXAMPLE
+  SET_EXAMPLE,
+  SET_EXAMPLES
 } from "./actionTypes";
 
 const options = (data) => {
@@ -28,7 +29,7 @@ export const submitNewExample = (exampleData) => {
 // Get single Example
 export const getExample = (id) => dispatch => {
   axios
-    .get("/examples/" + id)
+    .get('/examples/' + id)
     .then(res =>  dispatch({ type: SET_EXAMPLE, payload: res }))
     .catch(err => {
         dispatch({
@@ -38,3 +39,17 @@ export const getExample = (id) => dispatch => {
       }
     );
 };
+
+// Search Examples
+export const searchExamples = (queryData) => dispatch => {
+  axios
+    .post('/examples/search',{query: queryData})
+    .then(res =>  dispatch({ type: SET_EXAMPLES, payload: res }))
+    .catch(err => {
+        dispatch({
+          type: GET_ERRORS,
+          payload: err
+        })
+      }
+    );
+}

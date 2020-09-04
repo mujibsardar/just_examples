@@ -1,9 +1,7 @@
 import {
   SET_EXAMPLE,
+  SET_EXAMPLES
 } from "../store/actions/actionTypes";
-
-// NOT USED
-const isEmpty = require("is-empty");
 
 const initialState = {
   example: {},
@@ -17,6 +15,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         example: action.payload.data,
+      };
+    case SET_EXAMPLES:
+      return {
+        ...state,
+        examples: action.payload.data,
       };
     default:
       return state;

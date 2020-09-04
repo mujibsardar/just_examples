@@ -8,7 +8,7 @@ import { connect } from "react-redux";
 import "./style.css";
 
 class Card extends React.Component {
-  componentDidMount() {
+    componentDidMount() {
     this.getSingleExample();
   }
 
@@ -19,8 +19,6 @@ class Card extends React.Component {
   }
 
   render() {
-    // TODO Remove later
-    // console.log(JSON.stringify(this.props.example));
     return (
       <div className="row">
         <div className="col s12">
@@ -53,13 +51,14 @@ class Card extends React.Component {
 
 const mapStateToProps = state => {
     return {
-        example: state.examples.example
+        example: state.examples.example,
+        examples: state.examples.examples
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getExample: (exampleId) => dispatch(getExample(exampleId)),
+        getExample: (exampleId) => dispatch(getExample(exampleId))
     };
 };
 
