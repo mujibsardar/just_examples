@@ -14,11 +14,10 @@ class Navbar extends Component {
     const isAuthenticated = this.props.auth.isAuthenticated
     return (
       <nav>
-        <div className="nav-wrapper grey lighten-3">
-          <a href="/" style={{ fontFamily: "monospace" }}
+        <div className="nav-wrapper">
+          {/* <a href="/" style={{ fontFamily: "monospace" }}
           className="brand-logo left black-text active">
-          <i className="material-icons">code</i>Just Examples</a>
-
+          <i className="material-icons">code</i>Just Examples</a>          */}
 
           {/*conditional render*/}
           {!isAuthenticated ?

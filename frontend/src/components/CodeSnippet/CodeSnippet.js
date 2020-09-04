@@ -38,7 +38,10 @@ class CodeSnippet extends React.Component {
     }
   }
 
+ 
+
   render() {
+   
     return (
       <div className="codeSnippet" {...this.props}>
         <SyntaxHighlighter
