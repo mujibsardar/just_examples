@@ -3,6 +3,8 @@ const exampleCtrl =  require('../controllers/examplesController');
 const auth = require('../controllers/authController');
 const router = express.Router();
 
+// ********************************** /examples **********************************
+
 // Get All Examples
 router.get('/', exampleCtrl.list_examples);
 
