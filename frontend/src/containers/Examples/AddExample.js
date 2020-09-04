@@ -32,8 +32,10 @@ class AddExample extends React.Component {
     });
   };
 
+
   handleNewExampleSubmit = (e) => {
     e.preventDefault();
+    // e.stopPropagation();
     let errors = { ...this.state.errors };
     // TODO Put this back in later
     //const formValuesValid = Object.keys(errors).filter(field => errors[field] !== "").length === 0 ? true : false;
@@ -86,7 +88,7 @@ class AddExample extends React.Component {
           </h4>
           <p className="grey-text text-darken-1">Keep it simple</p>
         </div>
-        <form className="col s12" onSubmit={this.handleNewExampleSubmit}>
+        <form className="col s12">
           <div className="row">
             <div className="input-field col s12">
               <input
@@ -113,16 +115,14 @@ class AddExample extends React.Component {
               <TagsInput onNewTagSubmission={this.handleNewTag} />
             </div>
           </div>
-          <button
-            onKeyUp={(e) => e.key == "Enter" && e.preventDefault()}
-            className="btn waves-effect waves-light blue accent-4"
-            type="submit"
-            name="action"
-          >
-            Submit
-            <i className="material-icons right">send</i>
-          </button>
         </form>
+        <button
+          className="btn waves-effect waves-light blue accent-4"
+          onClick={this.handleNewExampleSubmit}
+        >
+          Submit
+          <i className="material-icons right">send</i>
+        </button>
       </div>
     );
   }
