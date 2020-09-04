@@ -7,12 +7,16 @@
     padding: 20px 0 0 0;
     background-color: #212121;
     text-align: center;
+    position: relative;
     color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 
 #custom-footer .media-block {
-    padding: 10px;
+    padding: 1.5px;
 }
 
 
@@ -46,7 +50,7 @@
 #custom-footer .text {
     color: #eee;
     font-size: 15px;
-    padding: 10px;
+    padding: 5px;
 }
 
 
@@ -55,9 +59,10 @@
 }
 
 
+
 #custom-footer .help-block .help-button {
     display: inline-block;
-    padding: 10px 0;
+    padding: 3px 0;
     min-width: 150px;
     color: #eee;
     font-size: 14px;
@@ -74,8 +79,8 @@
 
 #custom-footer .copyright-block {
     font-size: 12px;
-    line-height: 16px;
-    margin-top: 15px;
+    line-height: 12px;
+    margin-top: 5px;
     padding: 10px;
     background-color: #171717;
 }

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../store/actions/authActions";
 import classnames from "classnames";
+import "../../App.css"
 
 class Register extends Component {
   constructor() {

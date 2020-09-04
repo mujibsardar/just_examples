@@ -47,11 +47,11 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/example/:id" component={Card} />
-            <Footer/>
             <Switch>
               <PrivateRoute exact path="/add/example" component={Example} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
+            <Footer/>
           </div>
         </Router>
       </Provider>
