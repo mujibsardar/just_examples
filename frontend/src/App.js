@@ -48,12 +48,12 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/example/:id" component={Card} />
-            <Footer/>
             <Switch>
               {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
               <PrivateRoute exact path="/add/example" component={Example} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
+            <Footer/>
           </div>
         </Router>
       </Provider>
