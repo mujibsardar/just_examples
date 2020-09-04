@@ -13,7 +13,7 @@ import Login from "./containers/Auth/Login";
 import Example from "./containers/Examples/AddExample";
 import PrivateRoute from "./containers/Private-Route/PrivateRoute";
 import Dashboard from "./containers/Dashboard/Dashboard";
-import Search from "./components/Search/Search";
+import Search from "./components/Search";
 import "./App.css";
 import Card from "./components/Card/Card";
 

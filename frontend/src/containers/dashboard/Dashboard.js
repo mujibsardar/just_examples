@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../store/actions/authActions";
-import Search from "../../components/Search/Search";
+import Search from "../../components/Search";
 import ExampleList from "../../components/Example/ExampleList"
 //TODO: MOVE EXAMPLE LIST
 

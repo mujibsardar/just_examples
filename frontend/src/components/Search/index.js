@@ -1,10 +1,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
+// SEARCH STEP X)
+import { useDispatch } from 'react-redux';
+
 import "../../App.css";
 
+const Search = () => {
 
-function Search() {
+  const [dispatch, setDispatch] = useState({dispatch: useDispatch()});
+  // SEARCH STEP X)
+  function handleSearch(e) {
+    const value = e.target.value;
+    // TODO Remove later
+    console.log(`value: ${value}`);
+  }
+
   return (
     <div className="container-search" style={{
       //top:"50px"
@@ -21,6 +32,8 @@ function Search() {
                 type="text"
                 id="autocomplete-input"
                 className="autocomplete"
+                // SEARCH STEP X) Call on handleInputChange
+                onChange={handleSearch}
               />
               <label htmlFor="autocomplete-input">search examples</label>
             </div>

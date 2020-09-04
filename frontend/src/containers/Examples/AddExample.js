@@ -8,7 +8,7 @@ import TagsInput from "../../components/Tags/Tags";
 
 class AddExample extends React.Component {
   state = {
-    example_post: {},
+    example: {},
     errors: {},
   };
 
@@ -21,8 +21,8 @@ class AddExample extends React.Component {
     this.setState((prevState) => {
       return {
         ...prevState,
-        example_post: {
-          ...prevState.example_post,
+        example: {
+          ...prevState.example,
           [field]: value,
           // Add Tags field here
         },
@@ -41,17 +41,16 @@ class AddExample extends React.Component {
     if (false) {
       return;
     } else {
-      // TODO Change from hard coded user id.
       this.props
         .submitNewExample({
-          ...this.state.example_post
+          ...this.state.example
         })
         .then((res) => {
           if (res.errors) {
             this.setState((prevState) => {
               return {
                 ...prevState,
-                example_post: { ...prevState.example_post },
+                example: { ...prevState.example },
                 errors: { ...prevState.errors, ...res.errors },
               };
             });
@@ -67,10 +66,11 @@ class AddExample extends React.Component {
     this.setState((prevState) => {
       return {
         ...prevState,
-        example_post: {
-          ...prevState.example_post,
+        example: {
+          ...prevState.example,
           major_tags: tags
         },
+        // TODO Put back later
         //errors: {...errors}
         errors: {},
       };
