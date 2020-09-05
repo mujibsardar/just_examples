@@ -1,5 +1,4 @@
 import React from "react";
-import Body from "./Body";
 import Ratings from "./Ratings";
 import Modal from "./Modal";
 import Nav from "./Nav";
@@ -23,10 +22,7 @@ class Card extends React.Component {
       <div className="row">
         <div className="col s12">
           <h2 className="header">{this.props.example.title}</h2>
-          <div className="card horizontal">
-            <div id="codeSnippet">
-              <Body />
-            </div>
+          <div className="card horizontal">          
 
             <div className="card-stacked">
               <div className="card-content">

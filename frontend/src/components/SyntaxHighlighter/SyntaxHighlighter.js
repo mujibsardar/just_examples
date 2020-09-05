@@ -1,12 +1,12 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import { monokai } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import "./style.css";
 
 const LABEL_DEFAULT = "Copy";
 const LABEL_COPIED = "Copied!";
 
-class CodeSnippet extends React.Component {
+class SyntaxHigh extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,14 +36,12 @@ class CodeSnippet extends React.Component {
         });
       }, 1000);
     }
-  }
-
- 
+  } 
 
   render() {
    
     return (
-      <div className="codeSnippet" {...this.props}>
+      <div className="SyntaxHighlighter" {...this.props}>
         <SyntaxHighlighter
           aria-hidden="true" /* don't let screenreaders announce the formatted code sample */
           style={monokai}
@@ -52,11 +50,11 @@ class CodeSnippet extends React.Component {
           {this.props.children}
         </SyntaxHighlighter>
         <textarea /* announce this example to screenreaders */
-          className="codeSnippet__hiddenTextArea"
+          className="SyntaxHighlighter__hiddenTextArea"
           ref={this.textArea}
           defaultValue={this.props.children}
         />
-        <button className="codeSnippet__copyBtn" onClick={this.copyToClipboard}>
+        <button className="SyntaxHighlighter__copyBtn" onClick={this.copyToClipboard}>
           {!this.state.copying && !this.state.error && LABEL_DEFAULT}
           {this.state.copying && !this.state.error && LABEL_COPIED}
           {this.state.error && "Unable to copy"}
@@ -66,4 +64,4 @@ class CodeSnippet extends React.Component {
   }
 }
 
-export default CodeSnippet;
+export default SyntaxHigh;

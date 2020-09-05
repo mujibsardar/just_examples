@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import MyApp from "../../components/FeedTest/FeedTest";
+import Feed from "../../components/FeedTest/Index";
 
 
 class Landing extends Component {
   render() {
-    return (  
-
-      <MyApp />       
-      
-    );
+    return (
+      <Feed />       
+  );
   }
 }
 export default Landing;

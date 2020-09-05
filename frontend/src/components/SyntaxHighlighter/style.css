@@ -2,11 +2,11 @@
   border-radius: 10px;
 }
 
-.codeSnippet {
+.SyntaxHighlighter {
   position: relative;
 }
 
-.codeSnippet__hiddenTextArea {
+.SyntaxHighlighter__hiddenTextArea {
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -14,11 +14,11 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.codeSnippet:hover .codeSnippet__copyBtn {
+.SyntaxHighlighter:hover .SyntaxHighlighter__copyBtn {
   opacity: 1;
 }
 
-.codeSnippet__copyBtn {
+.SyntaxHighlighter__copyBtn {
   position: absolute;
   top: 2px;
   right: 2px;
@@ -30,7 +30,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.codeSnippet__copyBtn:hover {
+.SyntaxHighlighter__copyBtn:hover {
   cursor: pointer;
 }
 

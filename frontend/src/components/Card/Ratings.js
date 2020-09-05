@@ -1,5 +1,4 @@
 import React from "react";
-import Chips from "../Chips/Chips";
 
 export default class Ratings extends React.Component {
   render() {
@@ -18,7 +17,6 @@ export default class Ratings extends React.Component {
           2K
         </a>
         <a href="#" className="footer-link">
-          <Chips />
         </a>
       </div>
     );
