@@ -1,12 +1,13 @@
 import React from "react";
+import "./style.css";
 
 
-function AdCards() {
+export default function AdCards() {
     return (    
         <aside>
-        <div class="">
-          <div class="Hero2-ad">
-            <div class="Hero-ad">
+        <div>
+          <div>
+            <div>
               <a href="#">
                 <img
                   src="https://res.cloudinary.com/css-tricks/image/fetch/w_1200,q_auto,f_auto/https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/wordpress/wordpress-dot-com-movement.png"
@@ -16,7 +17,7 @@ function AdCards() {
               </a>
             </div>
             <div class="disc-ad">
-              <div class="disc-ad-img">
+              <div>
               <i class="material-icons Star-ad">code</i>
 
                 {/* <img
@@ -37,8 +38,8 @@ function AdCards() {
           </div>
         </div>
         <div class="Aside-ad-block">
-          <div class="Hero2-ad">
-            <div class="Hero-ad">
+          <div>
+            <div>
               <a href="#">
                 <img
                   src="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/monday/monday-600x600.png"
@@ -48,7 +49,7 @@ function AdCards() {
               </a>
             </div>
             <div class="disc-ad">
-              <div class="disc-ad-img">
+              <div>
               <i class="material-icons Star-ad">code</i>
               </div>
               <div class="disc-ad-under-img">
@@ -61,8 +62,8 @@ function AdCards() {
           </div>
         </div>
         <div class="Aside-ad-block">
-          <div class="Hero2-ad">
-            <div class="Hero-ad">
+          <div>
+            <div>
               <a href="#">
                 <img
                   src="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/hellosign/hellosign.jpg"
@@ -72,7 +73,7 @@ function AdCards() {
               </a>
             </div>
             <div class="disc-ad">
-              <div class="disc-ad-img">
+              <div>
               <i class="material-icons Star-ad">code</i>
               </div>
               <div class="disc-ad-under-img">
@@ -86,8 +87,8 @@ function AdCards() {
           </div>
         </div>
         <div class="Aside-ad-block">
-          <div class="Hero2-ad">
-            <div class="Hero-ad">
+          <div>
+            <div>
               <a href="#">
                 <img
                   src="https://css-tricks.com/wp-content/themes/CSS-Tricks-17/ads/hotjar/hotjar-600x600.png"
@@ -97,7 +98,7 @@ function AdCards() {
               </a>
             </div>
             <div class="disc-ad">
-              <div class="disc-ad-img">
+              <div>
               <i class="material-icons Star-ad">code</i>
               </div>
               <div class="disc-ad-under-img">
@@ -114,6 +115,4 @@ function AdCards() {
         <div></div>
       </aside>
     );
-  }
-  
-  export default AdCards;
+  }  

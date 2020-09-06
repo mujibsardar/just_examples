@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import "./style.css";
 
-function RecentExamples() {
+export default function RecentExamples() {
     return (    
         <div class="recent-examples">
         <div class="recent-examples-in">
-          <header class="recent-examples-head">
+          <header>
             <h2>
               Recently
               <br />
@@ -13,7 +14,7 @@ function RecentExamples() {
               Examples
             </h2>
             <div class="href-button">
-              <a href="#" class="button Post-job">
+              <a href="#" class="button">
                 Post example
               </a>
             </div>
@@ -21,7 +22,7 @@ function RecentExamples() {
           <ul class="recent-examples-list">
             <li>
               <a href="#" class="Location href">
-                <div class="Jobs-info">
+                <div>
                   <strong>Call-Em-All</strong> is hiring a Front End Engineer
                 </div>
                 <div></div>
@@ -78,4 +79,4 @@ function RecentExamples() {
     );
   }
   
-  export default RecentExamples;
+ 

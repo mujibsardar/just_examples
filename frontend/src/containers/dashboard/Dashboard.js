@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../store/actions/authActions";
 import Search from "../Search/Search";
-import ExampleList from "../../components/Example/ExampleList"
 //TODO: MOVE EXAMPLE LIST
 
 class Dashboard extends Component {
@@ -29,7 +28,7 @@ render() {
                 <div style={{
                   position: "relative",
                 }}>
-                  <ExampleList/>
+                 
               </div>
               </div>
             </div>

@@ -1,24 +1,22 @@
 import React from "react";
-import Example from "./CodeBox";
-import Header from "./Header";
-import RecentExamples from "./RecentExamples";
-import PopularExamples from "./PopularExamples";
-import AdCards from "./AdCards";
-import Footer from "../Footer/Footer";
+import ExampleCard from "./ExampleCard/ExampleCard";
+import RecentExamples from "../RecentExamples/RecentExamples";
+import PopularExamples from "../PopularExamples/PopularExamples";
+import AdCards from "../Ads/AdCards";
 import "./style.css";
 
 function Feed() {
   return (
     <div>
-      <Header />
+      {/* <Navbar /> */}
       <div class="All-site">
         <main class="Main-site">          
           <div class="Long-grid-main">
             <AdCards />
             <div class="examples">
-              <Example />
-              <Example />
-              <Example />           
+              <ExampleCard />
+              <ExampleCard />
+              <ExampleCard />           
               <a href="#" class="button Button-full">
                 More Examples? Click Me.
               </a>
@@ -26,9 +24,9 @@ function Feed() {
           </div>
           <PopularExamples />
           <RecentExamples />
-          <footer>
+          {/* <footer>
             <Footer />
-          </footer>
+          </footer> */}
         </main>
       </div>
     </div>
