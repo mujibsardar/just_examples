@@ -1,6 +1,7 @@
 import React from "react";
 import AdCards from "../../components/Ads/AdCards";
 import CodeHighlighter from "./CodeHighlighter";
+import Chips from "../../components/Chips/Chips";
 import "./style.css";
 const axios = require('axios');
 
@@ -25,6 +26,8 @@ const Repositiories = (props) => (
               <h3>{repo.name}</h3>
               <p>{repo.description}</p>
               <CodeHighlighter />
+<Chips />
+
               <p>
                 <a href={repo.html_url} target="_blank">
                   comments
