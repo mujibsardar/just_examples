@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { submitNewExample } from "../../store/actions/examplesActions";
 import TagsInput from "../../components/Tags/Tags";
+import "./style.css";
 
 class AddExample extends React.Component {
   state = {

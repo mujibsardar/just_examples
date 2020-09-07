@@ -1,4 +1,4 @@
-.Img-add {
+.img-add {
     width: 250px;
     border-radius: 20px;
 }
@@ -11,7 +11,7 @@
     font-size: 12px;
 }
 
-.Star-ad {
+.code-ad {
     position: absolute;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -28,6 +28,6 @@
     max-width: 150px;
 }
 
-.Aside-ad-block {
+.aside-ad-block {
     margin-top: 50px;
 }

@@ -21,14 +21,14 @@ export default class Footer extends React.Component {
                 </a>
             </div>
             <div className="text">
-                Have any questions or need assistance?
+                We'd appreciate your support
             </div>
             <div className="help-block">
                 <a className="help-button" href="/support">
                     SUPPORT
                 </a>
                 <a className="help-button" href="/STORE">
-                    STORE
+                    GITHUB
                 </a>
             </div>
             <div className="copyright-block">
