@@ -9,14 +9,15 @@ const axios = require('axios');
 // Sidebar
 const Sidebar = (props) => (
   <div className="sidebar">      
-      <div className="sidebar__ads">
+      <div className="ads">
       <AdCards />
       </div>       
   </div>
 );
 
 // search-examples
-const Repositiories = (props) => (
+const Cards = (props) => (
+  
   <div className="search-examples">
     <h2 className="search-title">Search Title: Example</h2>
     { props.repos != null ?
@@ -28,8 +29,7 @@ const Repositiories = (props) => (
               <p>{repo.description}</p>
               <Author />              
               <CodeHighlighter /> 
-              <Chips />              
-             
+              <Chips />             
             </li> 
           ) )
         }
@@ -38,14 +38,12 @@ const Repositiories = (props) => (
       <p>Loading...</p>
     }
   </div>
+ 
 );
 
-/**
- * ROOT COMPONENT
- */
+
 class Landing extends React.Component {
-  state = {
-    appTitle: 'Monthly Sponsors',
+  state = {    
     apiUrl: 'https://api.github.com/',
     user: null,
     repos: null
@@ -84,14 +82,11 @@ class Landing extends React.Component {
     return (
       <div id="app">
         <div className="wrap-sidebar">
-          <Sidebar 
-            appTitle={this.state.appTitle} 
-            user={this.state.user}
-          />
+          <Sidebar />
         </div>
         <main className="main-content">
-          <Repositiories repos={this.state.repos} />          
-        </main>
+          <Cards repos={this.state.repos} />          
+        </main>        
       </div>
     ) 
   }

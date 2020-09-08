@@ -1,7 +1,7 @@
 
 #app {
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@
     text-align: center;
 }
 
-.sidebar__ads {
+.ads {
     content: '';
     display: block;
     width: 30px;
@@ -31,7 +31,7 @@
     margin: 1.5rem 2rem;    
 }
 
-.sidebar__ads {
+.ads {
     text-align: center;
 }
 

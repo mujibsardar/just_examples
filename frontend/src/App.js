@@ -49,7 +49,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/example/:id" component={Card} />
-            <Route exact path="/new-example" component={Example} />
+            <Route exact path="/new-example" component={Example} />           
             <Footer />
             <Switch>
               {/* <PrivateRoute exact path="/new-example" component={Example} /> */}
