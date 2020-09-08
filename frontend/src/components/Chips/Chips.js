@@ -1,9 +1,10 @@
 import React from "react";
 import "./style.css";
 
-const tags = ['html', 'javascript', 'python', 'css'];
+const tags = ['html', 'javascript', 'python', 'css', 'java', 'c++'];
 
 export default class Chips extends React.Component {
+ 
   render() {
     return (
       <div className="chips-wrapper">

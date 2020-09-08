@@ -11,7 +11,7 @@
 }
 
 .href:hover {
-    background: linear-gradient(to right, #ff8a00, #da1b60);
+    background: linear-gradient(to right, #f79d00, #64f38c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #0B2349;
