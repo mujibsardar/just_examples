@@ -40,8 +40,4 @@
     grid-template-columns: 1fr 1fr 4fr;
 }
 
-.article-arrow-grid {
-    display: grid;
-    grid-template-columns: 35% 65%;
-}
 

@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import "./style.css";
 
 export default class Author extends Component {
+
   constructor() {
     super();
 
     let today = new Date(),
-      date = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
-
+    date = (today.getMonth() + 1) + "-" + today.getDate() + "-" + today.getFullYear();
     this.state = {
       currentDate: date,
-    };
+    };    
   }
 
   render() {
@@ -27,7 +27,7 @@ export default class Author extends Component {
 
         <div>
           <div className="pref">Author</div>
-          <div className="article-arrow-grid" className="href">
+          <div className="href">
             <div>
               <a href="#" className="href under-pref">
                 Joe Schmo
@@ -37,7 +37,7 @@ export default class Author extends Component {
         </div>
         <div>
           <div className="pref">Posted</div>
-          <div className="article-arrow-grid" className="href">
+          <div className="href">
             <div>
               <a href="#" className="href under-pref">
                 {this.state.currentDate}
