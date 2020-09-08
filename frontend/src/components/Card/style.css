@@ -172,3 +172,14 @@ div#SyntaxHighlighter {
   margin: 0;
 }
 
+
+
+/* NEW CSS */
+.post-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+  left: 8%;
+}
