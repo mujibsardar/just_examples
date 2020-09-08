@@ -4,7 +4,6 @@ import CodeHighlighter from "./CodeHighlighter";
 import Chips from "../../components/Chips/Chips";
 import Author from "../../components/Author/Author";
 import "./style.css";
-const axios = require("axios");
 
 // Sidebar
 const Sidebar = () => (
