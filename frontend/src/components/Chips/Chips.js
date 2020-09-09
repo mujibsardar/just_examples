@@ -1,16 +1,19 @@
 import React from "react";
+import "./style.css";
 
-export default function Chips() {
-const tags = ["HTML", "JavaScript", "Python", "C++", "jQuery"];
+const tags = ['html', 'javascript', 'python', 'css', 'java', 'c++'];
 
-
-  return (
-      <div className="align">
-        {tags.map((tag, index) => (
-            <span className="chip" key={index}>
-              {tag}
-            </span>
-          ))}
+export default class Chips extends React.Component {
+ 
+  render() {
+    return (
+      <div className="chips-wrapper">
+      {tags.map(tag => (
+        <div class="chip">
+          {tag}
+        </div>
+      ))}        
       </div>
-  );
+    );
+  }
 }

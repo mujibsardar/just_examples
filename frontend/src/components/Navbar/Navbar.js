@@ -1,76 +1,56 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { logoutUser } from "../../store/actions/authActions";
-import { connect } from "react-redux";
 import "./style.css";
 
-
-class Navbar extends Component {
-  onLogoutClick = e => {
-    e.preventDefault();
-    this.props.logoutUser();
-  };
-  render() {
-    const { user } = this.props.auth;
-    const isAuthenticated = this.props.auth.isAuthenticated
+export default function Navbar() {
     return (
-      <nav>
-        <div className="nav-wrapper grey darken-4">
-          <a href="/" style={{ fontFamily: "monospace" }}
-          className="brand-logo left black-text active white-text">
-          <i className="material-icons">code</i>Just Examples</a>
-
-
-          {/*conditional render*/}
-          {!isAuthenticated ?
-          <ul id="nav-mobile" className="right hide-on-med-and-down white-text">
-              <li><a href="/register" style={{
-              width: "110px",
-              borderRadius: "1px",
-              letterSpacing: "1.5px"
-            }}
-            className="waves-effect waves-light btn-small blue accent-3 white-text">Register</a></li>
-
-            <li><a href="/login" style={{
-              width: "90px",
-              borderRadius: "1px",
-              letterSpacing: "1px"
-            }}
-            className="waves-effect waves-light btn-small blue accent-3">Login</a></li>
-          </ul>
-
-          :
-
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
-          <li><a href="/add/example"className="waves-effect waves-light btn-small blue accent-4">Add Example</a></li>
-          <li><a href="/dashboard"className="btn-flat white-text">{user.name.split(" ")[0]}</a></li>
-          <li><a href="#" style={{
-            width: "90px",
-            borderRadius: "1px",
-            letterSpacing: "1px"
-          }}
-          className="btn-flat white-text"
-          onClick={this.onLogoutClick}
-          >Logout</a></li>
-        </ul>
-        } {/*end conditional render*/}
-        </div>
-      </nav>
+        <header>
+          <div class="header-content">
+            <div class="logo">
+              <a href="/" class="href logo-in">
+              <i class="material-icons logo-code">code</i>
+                <div class="logo-name">Just Examples</div>
+              </a>
+            </div>
+            <div>
+              <nav>
+                <ul class="header-nav">
+                  <li class="header-li">
+                    <a href="/new-example" class="href header-nav-grid">
+                      Post
+                    </a>
+                  </li>
+                  <li class="header-li">
+                    <a href="/login" class="href header-nav-grid">
+                      Sign In
+                    </a>
+                  </li>
+                  <li class="header-li">
+                    <a href="/register" class="href header-nav-grid">
+                      Register
+                    </a>
+                  </li>
+                  <li class="header-li">
+                    <a href="#" class="href header-nav-grid">
+                      About
+                    </a>
+                  </li>
+                  <li class="header-li">
+                    <a href="#" class="href header-nav-grid">
+                      Support
+                    </a>
+                  </li>
+                  <li class="header-li">
+                    <a href="https://github.com/mujibsardar/just_examples" target="_blank" class="href header-nav-grid">
+                      Repo
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="search">
+              <input class="search-site" placeholder="search examples..." />
+            </div>
+          </div>
+        </header>
     );
   }
-}
-
-Navbar.propTypes = {
-  logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
-};
-
-const mapStateToProps = state => ({
-  auth: state.auth
-});
-
-export default connect(
-  mapStateToProps,
-  { logoutUser }
-)(Navbar);

@@ -1,7 +1,7 @@
 import "regenerator-runtime/runtime";
 import React from "react";
 import Atenas from "react-atenas-components";
-import Body from "./Body";
+// import Body from "./Body";
 import Comments from "./Comments";
 import Nav from "./Nav";
 
@@ -27,7 +27,7 @@ class Modal extends React.Component {
             <h3>For-Loop JavaScript</h3>
             <Nav />
             
-            <Body />
+            {/* <Body /> */}
                       
             <Comments />
           </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import CodeSnippet from "../CodeSnippet/CodeSnippet";
+import SyntaxHighlighter from "../../components/SyntaxHighlighter/SyntaxHighlighter";
 
-export default class Body extends React.Component {
+export default class CodeHighlighter extends React.Component {
   render() {
     return (
       <div className="post-content">
-        <CodeSnippet language="javascript">
+        <SyntaxHighlighter language="javascript">
           {`function createClassNameString(classNames) {
   return classNames.join(' ');
 }
@@ -22,7 +22,7 @@ function createChildren(style, useInlineStyles) {
     }
   }
   `}
-        </CodeSnippet>
+        </SyntaxHighlighter>
       </div>
     );
   }

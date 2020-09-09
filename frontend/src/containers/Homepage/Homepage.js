@@ -1,31 +1,62 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Search from "../../components/Search";
+import React from "react";
+import AdCards from "../../components/Ads/AdCards";
+import CodeHighlighter from "./CodeHighlighter";
+import Chips from "../../components/Chips/Chips";
+import Author from "../../components/Author/Author";
+import "./style.css";
 
-class Home extends Component {
+// Sidebar
+const Sidebar = () => (
+  <div className="sidebar">
+    <div className="ads">
+      <AdCards />
+    </div>
+  </div>
+);
+
+// Search examples
+const Cards = (props) => (
+  <div className="search-examples">
+    <ul>
+      <li className="display-card">
+        <h3>for-loop, javascript</h3>
+        <p>
+          A simple, yet short, description goes here regarding the posted
+          example by user.
+        </p>
+        <Author />
+        <CodeHighlighter />
+        <Chips />
+      </li>
+
+      <li className="display-card">
+        <h3>npm create-react-app</h3>
+        <p>
+          A simple, yet short, description goes here regarding the posted
+          example by user.
+        </p>
+        <Author />
+        <CodeHighlighter />
+        <Chips />
+      </li>
+    </ul>
+  </div>
+);
+
+// root component
+class Landing extends React.Component {
   render() {
     return (
-      <>
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
-            <h4>
-              <b>Welcome</b> to {" "}
-              <span style={{ fontFamily: "monospace" }}>JUST EXAMPLES</span>
-            </h4>
-            <p className="flow-text grey-text text-darken-1">
-            </p>
-            <div style={{
-              position: "relative",
-              padding:"10vh"
-            }}>
-              <Search/>
-            </div>
-          </div>
+      <div id="app">
+        <div className="wrap-sidebar">
+          <Sidebar />
         </div>
+        <main className="main-content">
+          <Cards />
+        </main>
       </div>
-      </>
     );
   }
 }
-export default Home;
+
+export default Landing;

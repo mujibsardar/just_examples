@@ -34,6 +34,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 10px;
+  margin-left: -52px;
 }
 
 .post-profile-name {
@@ -53,9 +54,9 @@
 }
 
 /* Content */
-.post-content {
+/* .post-content {
   padding: 14px 8px;
-}
+} */
 
 .align {
   margin-top: 20px;
@@ -156,17 +157,29 @@ button.AtenasButton___VpMK1 {
   border-radius: 25px;
 }
 
-div#codeSnippet {
+div#SyntaxHighlighter {
   background: rgb(39, 40, 34);
   border-radius: 20px 0px 0px 20px;
 }
 
 .post-footer {
   padding: 2px 0px;
-  top: 58%;
-  position: fixed;
+  position: relative;
+  top: 25%;
 }
 
 .modal-wrapper .waves-effect {
   margin: 0;
+}
+
+
+
+/* NEW CSS */
+.post-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+  left: 8%;
 }
