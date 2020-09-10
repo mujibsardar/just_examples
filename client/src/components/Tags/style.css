@@ -1,4 +1,4 @@
-.tags-input {
+/* .tags-input {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -7,18 +7,18 @@
     border: 1px solid #d6d8da;
     border-radius: 6px;
   }
-  
+
   .tags-input:focus-within {
     border: 1px solid #000;
   }
-  
+
   .tags-input input {
     border: none;
     height: 46px;
     font-size: 14px;
     padding: 4px 0 0 0;
   }
-  
+
   .tags-input input:focus {
     outline: transparent;
-  }
+  } */
