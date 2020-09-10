@@ -15,7 +15,7 @@ export default function Navbar() {
               <nav>
                 <ul class="header-nav">
                   <li class="header-li">
-                    <a href="/new-example" class="href header-nav-grid">
+                    <a href="/add/example" class="href header-nav-grid">
                       Post
                     </a>
                   </li>

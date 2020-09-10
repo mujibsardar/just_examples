@@ -3,8 +3,8 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
-import { submitNewExample } from "../../store/actions/examplesActions";
-import TagsInput from "../../components/Tags";
+import { submitNewExample } from "../../../store/actions/examplesActions";
+import TagsInput from "../../../components/Tags";
 import "./style.css";
 
 class AddExample extends Component {
