@@ -3,8 +3,7 @@ import "./style.css";
 
 const tags = ['html', 'javascript', 'python', 'css', 'java', 'c++'];
 
-export default class Chips extends Component {
- 
+export default class Tags extends Component {
   render() {
     return (
       <div className="chips-wrapper">
@@ -12,7 +11,7 @@ export default class Chips extends Component {
         <div class="chip">
           {tag}
         </div>
-      ))}        
+      ))}
       </div>
     );
   }

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../App.css"
-
+import "../../../App.css"
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { loginUser } from "../../store/actions/authActions";
+import { loginUser } from "../../../store/actions/authActions";
 import classnames from "classnames";
 
 class Login extends Component {
