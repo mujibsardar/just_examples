@@ -1,0 +1,43 @@
+.pref {
+    opacity: 0.3;
+    font-size: 13px;
+}
+
+.under-pref {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    background: linear-gradient(to right, #f79d00, #64f38c);
+}
+
+.article {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.href {
+    text-decoration: none;
+    color: white;
+}
+
+.href:hover {
+    background: linear-gradient(to right, #f79d00, #64f38c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+}
+
+.article-author-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+}
+
+

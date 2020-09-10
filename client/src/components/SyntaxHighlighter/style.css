@@ -1,0 +1,39 @@
+.modal-wrapper pre {
+  border-radius: 10px;
+}
+
+.SyntaxHighlighter {
+  position: relative;
+}
+
+.SyntaxHighlighter__hiddenTextArea {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.SyntaxHighlighter:hover .SyntaxHighlighter__copyBtn {
+  opacity: 1;
+}
+
+.SyntaxHighlighter__copyBtn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: transparent;
+  opacity: 0;
+  color: #fff;
+  border: 0;
+  font-size: 11px;
+  transition: all 0.3s ease-in-out;
+}
+
+.SyntaxHighlighter__copyBtn:hover {
+  cursor: pointer;
+}
+
+.card-header {
+  font-size-adjust: 2.2rem;
+}
