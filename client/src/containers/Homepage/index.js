@@ -12,11 +12,25 @@ class Home extends Component {
           <Sidebar />
         </div>
         <main className="main-content">
-          <ListExamples />
+          <ListExamples examples={[{},{}]}/>
         </main>
       </div>
     );
   }
 }
 
+// Dashboard.propTypes = {
+  // logoutUser: PropTypes.func.isRequired,
+  // auth: PropTypes.object.isRequired
+// };
+
 export default Home;
+
+// const mapStateToProps = state => ({
+//   examples: state.examples
+// });
+//
+// export default connect(
+//   mapStateToProps,
+//   { logoutUser }
+// )(Home);
