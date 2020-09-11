@@ -1,62 +1,37 @@
 import React, { Component } from "react";
-import AdCards from "../../components/Ads";
-import CodeHighlighter from "./CodeHighlighter";
-import Chips from "../../components/Chips";
-import Author from "../../components/Author";
+import Sidebar from "../../components/Sidebar";
+import ListExamples from "../Examples/ListExamples";
+import { connect } from "react-redux";
 import "./style.css";
 
-// Sidebar
-const Sidebar = () => (
-  <div className="sidebar">
-    <div className="ads">
-      <AdCards />
-    </div>
-  </div>
-);
-
-// Search examples
-const Cards = (props) => (
-  <div className="search-examples">
-    <ul>
-      <li className="display-card">
-        <h3>for-loop, javascript</h3>
-        <p>
-          A simple, yet short, description goes here regarding the posted
-          example by user.
-        </p>
-        <Author />
-        <CodeHighlighter />
-        <Chips />
-      </li>
-
-      <li className="display-card">
-        <h3>npm create-react-app</h3>
-        <p>
-          A simple, yet short, description goes here regarding the posted
-          example by user.
-        </p>
-        <Author />
-        <CodeHighlighter />
-        <Chips />
-      </li>
-    </ul>
-  </div>
-);
-
 // root component
-class Landing extends Component {
+class Home extends Component {
   render() {
+    // TODO Remove later
+    console.log(`============> examples ${JSON.stringify(this.props.examples)}`)
     return (
       <div id="app">
         <div className="wrap-sidebar">
           <Sidebar />
         </div>
         <main className="main-content">
-          <Cards />
+          <ListExamples examples={[{},{}]}/>
         </main>
       </div>
     );
   }
 }
 
-export default Landing;
+Home.propTypes = {
+  // logoutUser: PropTypes.func.isRequired,
+  // auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  examples: state.examples.examples
+});
+
+export default connect(
+  mapStateToProps
+  // { logoutUser }
+)(Home);

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SyntaxHighlighter from "../../components/SyntaxHighlighter";
+import SyntaxHighlighter from "../SyntaxHighlighter";
 
 export default class CodeHighlighter extends Component {
   render() {

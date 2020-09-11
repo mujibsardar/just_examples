@@ -10,12 +10,11 @@ import Footer from "./components/Footer";
 import Homepage from "./containers/Homepage";
 import Register from "./containers/Auth/Register";
 import Login from "./containers/Auth/Login";
-import Example from "./containers/Examples";
+import AddExample from "./containers/Examples/AddExample";
 import PrivateRoute from "./containers/Private-Route/PrivateRoute";
 import Dashboard from "./containers/Dashboard";
 import Search from "./components/Search";
 import "./App.css";
-import Card from "./components/Card";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -46,10 +45,8 @@ class App extends Component {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/example/:id" component={Card} />
-            <Route exact path="/new-example" component={Example} />
             <Switch>
-              <PrivateRoute exact path="/add/example" component={Example} />
+              <PrivateRoute exact path="/add/example" component={AddExample} />
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
             <Footer/>
