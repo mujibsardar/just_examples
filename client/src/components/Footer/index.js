@@ -7,16 +7,16 @@ export default class Footer extends Component {
         <div id="custom-footer">
         <div className="custom-footer-wrapper">
             <div className="media-block">
-                <a className="media-link" href="">
+                <a className="media-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Twitter-min.png" />
                 </a>
-                <a className="media-link" href="">
+                <a className="media-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Youtube-min.png" />
                 </a>
-                <a className="media-link" href="">
+                <a className="media-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Twitch-min.png" />
                 </a>
-                <a className="media-link discord-link" href="">
+                <a className="media-link discord-link" href="#">
                     <img src="https://s3.amazonaws.com/files.enjin.com/851662/Footer_Images_Optimised/Discord-min.png"/>
                 </a>
             </div>
@@ -32,10 +32,10 @@ export default class Footer extends Component {
                 </a>
             </div>
             <div className="copyright-block">
-                <i className="material-icons">copyright</i> 2020 Just Examples<br/>                
+                <i className="material-icons">copyright</i> 2020 Just Examples<br/>
             </div>
         </div>
-    </div>    
+    </div>
     );
   }
 }

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import Sidebar from "../../components/Sidebar";
 import ListExamples from "../Examples/ListExamples";
+import { connect } from "react-redux";
 import "./style.css";
 
 // root component
 class Home extends Component {
   render() {
+    // TODO Remove later
+    console.log(`============> examples ${JSON.stringify(this.props.examples)}`)
     return (
       <div id="app">
         <div className="wrap-sidebar">
@@ -19,18 +22,16 @@ class Home extends Component {
   }
 }
 
-// Dashboard.propTypes = {
+Home.propTypes = {
   // logoutUser: PropTypes.func.isRequired,
   // auth: PropTypes.object.isRequired
-// };
+};
 
-export default Home;
+const mapStateToProps = state => ({
+  examples: state.examples.examples
+});
 
-// const mapStateToProps = state => ({
-//   examples: state.examples
-// });
-//
-// export default connect(
-//   mapStateToProps,
-//   { logoutUser }
-// )(Home);
+export default connect(
+  mapStateToProps
+  // { logoutUser }
+)(Home);
