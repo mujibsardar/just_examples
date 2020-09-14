@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
   <div className="sidebar">
     <div className="ads">
-      <AdCards />
+      {/* <AdCards /> */}
     </div>
   </div>
   );

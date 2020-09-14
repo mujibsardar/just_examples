@@ -1,7 +1,6 @@
 import React from "react";
 import CodeHighlighter from "../CodeHighlighter";
 import Tags from "../NewTags";
-import Author from "../Author";
 
 export default function Example(props) {
     return (
@@ -9,8 +8,7 @@ export default function Example(props) {
         <h3>Title Here</h3>
         <p>
           Description Here
-        </p>
-        <Author />
+        </p>        
         <CodeHighlighter />
         <Tags />
       </li>
