@@ -1,0 +1,340 @@
+.card-container {
+    height: 100%;
+    margin-top: 5vh;
+    width: 100%;
+  }
+  
+  .tab-wrapper h3, h5 {
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;
+  }
+  
+  .tab-wrapper hr {
+    background: linear-gradient(to right, rgba(64, 64, 64, 0), rgba(64, 96, 96, 0.5), rgba(64, 64, 64, 0));
+    border: 0;
+    height: 1px;
+    width: auto;
+    margin-bottom: 15px;
+  }
+  
+  .tab__copy img {
+    display: inline-block;
+    margin: 0 auto 0 auto;
+    max-width: 350px;
+    width: 400px;
+  }
+  
+  figure {
+    display: inline-block;
+    margin: 16px auto 22px auto;
+    height: 100%;
+  }
+  
+  .tab-wrapper figure > figcaption {
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    width: 100%;
+    font-family: "Roboto-Slab";
+  }
+  
+  .tab-wrapper p {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    text-align: justify;
+  }
+  
+  .tab-wrapper p:first-letter {
+    margin-left: 5%;
+  }
+  
+  .card-tabbed {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    -ms-overflow-style: none;
+  }
+  
+  .card-tabbed ::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  .navicon {
+    font-size: 21.6px;
+    padding: auto;
+  }
+  
+  .tab-wrapper {
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 400px;
+    position: relative;
+  }
+  
+  .tab {
+    display: none;
+    user-select: none;
+  }
+  
+  .tab:checked:nth-of-type(1) ~ .tab__copy:nth-of-type(1) {
+    transition: 0.5s all ease-in;
+    transform: translateY(0);
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tab:checked:nth-of-type(2) ~ .tab__copy:nth-of-type(2) {
+    transition: 0.5s all ease-in;
+    transform: translateY(0);
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tab:checked:nth-of-type(3) ~ .tab__copy:nth-of-type(3) {
+    transition: 0.5s all ease-in;
+    transform: translateY(0);
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .tab:first-of-type + label {
+    border-top-left-radius: 5px;
+  }
+  
+  .tab:not(:first-of-type):not(:last-of-type) + label {
+    border-radius: 0;
+  }
+  
+  .tab:last-of-type + label {
+    border-top-right-radius: 5px;
+  }
+  
+  .tab:checked + label {
+    background-color: #fdfdfd;
+    box-shadow: none;
+    cursor: default;
+  }
+  
+  .tab:checked + label:hover {
+    background-color: #fdfdfd;
+    box-shadow: none;
+  }
+  
+  .tab + label {
+    transition: 0.25s all ease;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+    display: block;
+    color: rgba(0, 15, 30, 0.8);
+    flex-grow: 1;
+    text-align: center;
+    background-color: #f0f0f0;
+    user-select: none;
+    height: 54px;
+    padding-top: 15px;
+    box-shadow: 0 -3px 3px #d7d7d7 inset;
+  }
+  
+  .tab + label:hover {
+    transition: 0.25s all ease;
+    background-color: #f7f7f7;
+    box-shadow: 0 -2px 3px #ddd inset;
+  }
+  
+  .tab__copy {
+    transform: translateY(3px);
+    padding: 10px 25px;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    height: 546px;
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  .tab-wrapper::before {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.1), #fdfdfd 100%);
+    content: "";
+    margin-top: -25px;
+    position: relative;
+    z-index: 3;
+    width: 400px;
+    height: 24px;
+    top: 79px;
+  }
+  
+  .tab-wrapper::after {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), #fdfdfd 100%);
+    content: "";
+    margin-top: -24px;
+    position: relative;
+    z-index: 3;
+    width: 400px;
+    height: 24px;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .slide-wrapper {
+    height: 265px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .slide-wrapper::before {
+    content: "";
+    margin-top: -20px;
+    position: fixed;
+    z-index: 3;
+    width: 50px;
+    height: 250px;
+    left: 0;
+  }
+  
+  .slide-wrapper::after {
+    content: "";
+    margin-top: -20px;
+    position: fixed;
+    z-index: 3;
+    width: 48px;
+    height: 250px;
+    right: 0;
+  }
+  
+  .navdot {
+    font-size: 12px;
+  }
+  
+  .slide {
+    display: none;
+    z-index: 1;
+  }
+  
+  .slide:checked + label {
+    color: rgba(0, 15, 30, 0.8);
+  }
+  
+  .slide:checked + label:nth-of-type(1) ~ .slide__reel {
+    left: 0%;
+  }
+  
+  .slide:checked + label:nth-of-type(2) ~ .slide__reel {
+    left: -100%;
+  }
+  
+  .slide:checked + label:nth-of-type(3) ~ .slide__reel {
+    left: -200%;
+  }
+  
+  .slide:checked + label:nth-of-type(4) ~ .slide__reel {
+    left: -300%;
+  }
+  
+  .slide:checked + label:nth-of-type(5) ~ .slide__reel {
+    left: -400%;
+  }
+  
+  .slide:checked + label:nth-of-type(6) ~ .slide__reel {
+    left: -500%;
+  }
+  
+  .slide:checked + label:nth-of-type(7) ~ .slide__reel {
+    left: -600%;
+  }
+  
+  .slide:checked + label:hover {
+    color: rgba(0, 15, 30, 0.8);
+    cursor: default;
+  }
+  
+  .slide + label {
+    transition: 0.5s all linear;
+    cursor: pointer;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.25);
+    margin-left: 8px;
+    margin-right: 8px;
+    z-index: 1;
+  }
+  
+  .slide + label:hover {
+    transition: 0.5s all linear;
+    color: rgba(0, 91, 183, 0.8);
+  }
+  
+  .slide__reel {
+    transition: 1s all ease-out;
+    position: absolute;
+    width: 700%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    z-index: 0;
+  }
+  
+  .slide__content {
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: auto;
+    height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+  
+  #bug, #plug {
+    transition: 0.5s color ease-in;
+    position: relative;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: rgba(204, 204, 204, 0.75);
+    text-decoration: none;
+    padding-top: 10px;
+  }
+  
+  #bug:hover, #plug:hover {
+    transition: 0.5s color ease-out;
+    color: #f7f7f7;
+  }
+  
+  #bug:hover > .fa, #plug:hover > .fa {
+    transform: rotate(360deg);
+    transition: 1s transform ease-out;
+  }
+  
+  @media (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #bug, #plug, .card-tabbed > * {
+      display: none;
+    }
+  
+    .card-tabbed::after {
+      width: 400px;
+      letter-spacing: 1.2px;
+      font-size: 2rem;
+      color: #fa7a55;
+      font-weight: bold;
+      content: "INTERNET EXPLORER IS NOT SUPPORTED. GET A REAL BROWSER";
+    }
+  }
+  /* IN CASE ANYONE CARES, THE FEW ERRORS THAT CSS-LINT PICKS UP ON IN THE COMPLIED CSS ARE MOSTLY ABOUT VENDOR PREFIXING AND CAN PROBABLY BE IGNORED */

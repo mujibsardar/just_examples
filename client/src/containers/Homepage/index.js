@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import Sidebar from "../../components/Sidebar";
 import ListExamples from "../Examples/ListExamples";
 import { connect } from "react-redux";
+import TabbedCard from "../../components/TabbedCard/CardContent";
 import "./style.css";
+
 
 // root component
 class Home extends Component {
@@ -11,11 +13,12 @@ class Home extends Component {
     console.log(`============> examples ${JSON.stringify(this.props.examples)}`)
     return (
       <div id="app">
-        <div className="wrap-sidebar">
+        {/* <div className="wrap-sidebar">
           <Sidebar />
-        </div>
+        </div> */}
         <main className="main-content">
-          <ListExamples examples={[{},{}]}/>
+          {/* <ListExamples examples={[{},{}]}/> */}
+          <TabbedCard />
         </main>
       </div>
     );
