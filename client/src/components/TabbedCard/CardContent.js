@@ -1,25 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 export default function CardContent() {
+  const [checkedOne, setCheckedOne] = useState(true);
+  const [checkedTwo, setCheckedTwo] = useState(false);
+  const [checkedThree, setCheckedThree] = useState(false);
+
   return (
     <div class="tab-wrapper">
-      <input class="tab" id="tab1" name="nav" type="radio" checked />
+      <input
+        class="tab"
+        id="tab1"
+        name="nav"
+        type="radio"
+        checked={checkedOne}
+        onChange={() => {
+          console.log(`checked: ${checkedOne}`);
+          setCheckedOne(!checkedOne);
+          setCheckedTwo(false);
+          setCheckedThree(false);
+        }}
+      />
       <label for="tab1">
         <span class="navicon fa fa-fw fa-code"></span>
       </label>
-      <input class="tab" id="tab2" name="nav" type="radio" />
+      <input
+        class="tab"
+        id="tab2"
+        name="nav"
+        type="radio"
+        checked={checkedTwo}
+        onChange={() => {
+          console.log(`checked: ${checkedTwo}`);
+          setCheckedOne(false);
+          setCheckedTwo(!checkedTwo);
+          setCheckedThree(false);
+        }}
+      />
       <label for="tab2">
         <span class="navicon fa fa-fw fa-comments"></span>
       </label>
-      <input class="tab" id="tab3" name="nav" type="radio" />
+      <input
+        class="tab"
+        id="tab3"
+        name="nav"
+        type="radio"
+        checked={checkedThree}
+        onChange={() => {
+          console.log(`checked: ${checkedThree}`);
+          setCheckedOne(false);
+          setCheckedTwo(false);
+          setCheckedThree(!checkedThree);
+        }}
+      />
       <label for="tab3">
         <span class="navicon fa fa-fw fa-address-card"></span>
       </label>
 
       <div class="tab__copy" id="first_who">
         <h3>who</h3>
-      {/* code here */}
+        {/* code here */}
         <p>
           Made in the interiors of collapsing stars great turbulent clouds,
           Apollonius of Perga network of wormholes hearts of the stars with
