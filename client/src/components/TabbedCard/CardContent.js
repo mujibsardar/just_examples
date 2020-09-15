@@ -19,11 +19,7 @@ export default function CardContent() {
 
       <div class="tab__copy" id="first_who">
         <h3>who</h3>
-        <img
-          alt="banner"
-          class="banner"
-          src="http://www.placehold.it/700x200/F2F2F2/115533?text=B A N N E R"
-        />
+      {/* code here */}
         <p>
           Made in the interiors of collapsing stars great turbulent clouds,
           Apollonius of Perga network of wormholes hearts of the stars with
