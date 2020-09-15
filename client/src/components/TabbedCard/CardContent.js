@@ -14,7 +14,7 @@ export default function CardContent() {
       </label>
       <input class="tab" id="tab3" name="nav" type="radio" />
       <label for="tab3">
-        <span class="navicon fa fa-fw fa-person"></span>
+        <span class="navicon fa fa-fw fa-address-card"></span>
       </label>
 
       <div class="tab__copy" id="first_who">
