@@ -6,8 +6,7 @@ export default function TabbedCard() {
   return (
     <div class="card-container">
       <div class="card-tabbed">
-        <CardContent />
-        <CardContent />              
+        <CardContent />            
       </div>
     </div>  
   );

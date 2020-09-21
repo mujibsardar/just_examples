@@ -18,8 +18,8 @@ class Home extends Component {
         </div> */}
         <main className="main-content">
           {/* <ListExamples examples={[{},{}]}/> */}
-          <TabbedCard />
-        </main>
+          <TabbedCard />         
+        </main>     
       </div>
     );
   }

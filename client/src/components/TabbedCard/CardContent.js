@@ -55,7 +55,7 @@ export default function CardContent() {
         }}
       />
       <label for="tab3">
-        <span class="navicon fa fa-fw fa-address-card"></span>
+        <span class="navicon fa fa-fw fa-info-circle"></span>
       </label>
 
       <div class="tab__copy" id="first_who">
@@ -93,5 +93,6 @@ export default function CardContent() {
         <hr />      
       </div>
     </div>
+    
   );
 }
