@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CodeHighlighter from "../CodeHighlighter/index";
 import "./style.css";
 
 export default function CardContent() {
@@ -58,47 +59,13 @@ export default function CardContent() {
       </label>
 
       <div class="tab__copy" id="first_who">
-        <h3>who</h3>
-        {/* code here */}
-        <p>
-          Made in the interiors of collapsing stars great turbulent clouds,
-          Apollonius of Perga network of wormholes hearts of the stars with
-          pretty stories for which there's little good evidence, rich in heavy
-          atoms science of brilliant syntheses. Orion's sword muse about star
-          stuff harvesting star light quasar, across the centuries Vangelis.
-          White dwarf, shores of the cosmic ocean gathered by gravity are
-          creatures of the cosmos.
-        </p>
-        <hr />
-        <h3>why</h3>
-        <p>
-          Great turbulent clouds star stuff harvesting star light! Globular star
-          cluster Hypatia encyclopaedia galactica! Circumnavigated intelligent
-          beings! Another world? Great turbulent clouds made in the interiors of
-          collapsing stars something incredible is waiting to be known,
-          permanence of the stars a mote of dust suspended in a sunbeam
-          astonishment cosmos, laws of physics, Tunguska event hydrogen atoms.
-          Colonies across the centuries cosmos of Flatland!
-        </p>
-        <p>
-          Concept of the number one with pretty stories for which there's little
-          good evidence, astonishment culture, dream of the mind's eye a mote of
-          dust suspended in a sunbeam, permanence of the stars, descended from
-          astronomers with pretty stories for which there's little good evidence
-          emerged into consciousness. Worldlets venture, bits of moving fluff.
-          Is anyone even reading this? Explorations inconspicuous motes of rock
-          and gas light years globular star cluster, not a sunrise but a
-          galaxyrise a mote of dust suspended in a sunbeam dream of the mind's
-          eye tesseract quasar. Vanquish the impossible, birth citizens of
-          distant epochs corpus callosum! Radio telescope. Gathered by gravity
-          Cambrian explosion colonies. Cosmic fugue not a sunrise but a
-          galaxyrise extraordinary claims and billions upon billions upon
-          billions upon billions upon billions upon billions upon billions!
-        </p>
+        <h3>example title</h3>        
+       <CodeHighlighter />
+        <hr />      
       </div>
-      <div class="tab__copy" id="second_what">
-        <h3>what</h3>
 
+      <div class="tab__copy" id="second_what">
+        <h3>comments</h3>
         <p>
           If you wish to make an apple pie from scratch, you must first invent
           the Universe. . .
@@ -115,7 +82,7 @@ export default function CardContent() {
         </p>
       </div>
       <div class="tab__copy" id="third_how">
-        <h3>how</h3>
+        <h3>description</h3>
         <p>
           Inconspicuous motes of rock and gas. Citizens of distant epochs,
           descended from astronomers bits of moving fluff, science extraordinary
@@ -123,18 +90,7 @@ export default function CardContent() {
           Apollonius of Perga dispassionate extraterrestrial observer light
           years?
         </p>
-        <br />
-        <p>
-          Vastness is bearable only through love. Dream of the mind's eye shores
-          of the cosmic ocean brain is the seed of intelligence Orion's sword
-          the carbon in our apple pies billions upon billions, radio telescope
-          the ash of stellar alchemy a very small stage in a vast cosmic arena
-          with pretty stories for which there's little good evidence hydrogen
-          atoms the ash of stellar alchemy as a mote of dust suspended on a
-          sunbeam?
-        </p>
-        <hr />
-        <h5>thanks for checking out my pen!</h5>
+        <hr />      
       </div>
     </div>
   );
