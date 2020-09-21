@@ -58,13 +58,13 @@ export default function CardContent() {
         <span class="navicon fa fa-fw fa-info-circle"></span>
       </label>
 
-      <div class="tab__copy" id="first_who">
+      <div class="tab__copy" id="firstCode">
         <h3>example title</h3>        
        <CodeHighlighter />
         <hr />      
       </div>
 
-      <div class="tab__copy" id="second_what">
+      <div class="tab__copy" id="secondComments">
         <h3>comments</h3>
         <p>
           If you wish to make an apple pie from scratch, you must first invent
@@ -81,7 +81,7 @@ export default function CardContent() {
           Equation Tunguska event, how far away.
         </p>
       </div>
-      <div class="tab__copy" id="third_how">
+      <div class="tab__copy" id="thirdInfo">
         <h3>description</h3>
         <p>
           Inconspicuous motes of rock and gas. Citizens of distant epochs,

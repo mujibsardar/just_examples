@@ -14,7 +14,7 @@ export default function Example(props) {
           <input class="tab" id="tab3" name="nav" type="radio" />
           <label for="tab3"><span class="navicon fa fa-fw fa-space-shuttle"></span></label>
   
-          <div class="tab__copy" id="first_who">
+          <div class="tab__copy" id="firstCode">
             <h3>
               who
             </h3>
@@ -48,7 +48,7 @@ export default function Example(props) {
               billions upon billions!
             </p>
           </div>
-          <div class="tab__copy" id="second_what">
+          <div class="tab__copy" id="secondComments">
             <h3>
               what
             </h3>
@@ -64,7 +64,7 @@ export default function Example(props) {
               science, intelligent beings tingling of the spine Drake Equation Tunguska event, how far away.
             </p>
           </div>
-          <div class="tab__copy" id="third_how">
+          <div class="tab__copy" id="thirdInfo">
             <h3>
               how
             </h3>
